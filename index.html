@@ -3,14 +3,19 @@
 
 <head>
     <title>Tom Erik Rossavik</title>
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.7/lib/draggable.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/swappable.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/plugins.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Metrophobic">
     <link rel="stylesheet" href="assets/fonts/lp132font/stylesheet.css">
      
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
      <link rel="stylesheet" href="/assets/style.css">
     <!--LOCAL LINKING-->
     <link rel="stylesheet" href="../assets/style.css">
@@ -20,78 +25,122 @@
     <script src="assets/main.js"></script>
 </head>
 
-<body id="thebody">
+<body>
 
-<!------------------------------------------------------------------------------------------------------------------->
-            <!--introVideo -->
+<!-- COFFEE SMOKE
+<div id="wrap">
+  <div class="steam" id="steam-one"></div>
+  <div class="steam" id="steam-two"></div>
+  <div class="steam" id="steam-three"></div>
+  <div class="steam" id="steam-four"></div>  
+</div>
+-->
 
-            <!-- Trigger/Open The INTRO VIDEO Modal -->
-         
-            <!--<div hidden id="introVideoModal" class="introVideoModalBackground">
 
-             Modal content 
-            <div class="introVideo-modal-content"> 
-                
-               <div id="zout" style="width: 5vw; height: 5vw; background-color: white; z-index: 100; position: absolute; top: 5vh; right: 5vw; background-image: url('assets/images/x.png'); background-size: cover; border-radius: 50%;" onclick="closeIntroVideo()"></div>
-           
-           <iframe src="https://player.vimeo.com/video/467496691" id="introVideoIframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-           
-            </div>
+<img src="assets/images/shelfFullSize.png" style="width: 100vw; height: calc(width * 1.2);
+  height: calc(width * 100); position: absolute; top: -0.5vw; left: 0vw; z-index: 65;">
 
-            </div>
+<img src="assets/images/camera.png" style="width: 30vw;
+  height: calc(width * 100); position: absolute; top: -1vw; left: 56vw; z-index: 50;">
+
+<img src="assets/images/greenPlant.png" style="width: 30vw;
+  height: calc(width * 100); position: absolute; top: 0vw; left: 0vw; z-index: 65;">
+
+<img src="assets/images/steelRod.png" style="width: 1.2vw;
+  height: calc(width * 100); position: absolute; top: 0; left: 11vw; z-index: 60;">
+
+
+  
+
+<h3 style="font-size: 80px;">VERTICAL</h3>
+
+<h2 class="hideMe" style="font-size: 80px; text-align: center; z-index: 100;">HORIZONTAL</h2>
+
+
+
+<button class="buttonOne" onclick="activateOne();"></button> 
+
+<button class="buttonTwo" onclick="activateTwo();"></button>
+ 
+<button class="buttonThree" onclick="activateThree();"></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<video id="optionOne" class="insideTVframe" autoplay="" loop muted="">
+<source src="assets/videos/soundBarz.mp4" type="video/mp4">
+</video> 
+
+
+
+<div hidden id="optionTwo" class="insideTVframe">
+<h1 style="position: relative; left: 10%; top: 10%;">Option 2</h1>
+
+</div>
+
+
+
+<video hidden id="optionThree" class="insideTVframe" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+  <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+</video>
+
+
+
+
+<!--
+<p class="wordwithoutaction">Hi, I'm Tom Erik. I make
+<p class="word"></p></p>
+<p class="wordwithoutaction" style="padding-top: 3vh; ">If you want to get a hold of me, call 911 on the red phone and shout the last four digits of your credit card.<br>
+My children's book "The Floor is Full of Sharks" is available for purchase by clicking on the book below.<br>
+
+</p>
+-->
+
+
+<!--
+
+
+<div class="content" id="about" style="">
+<p>Hi, I'm Tom Erik Rossavik, although people usually just call me Tom Erik Olsen Raften Rossavik, for short. I'm often considered an influencers' influencer.</p>
+
+<p>I'm sure it's hard to believe, I'm not a comedian.</p>
+<p>I make stuff though. Like this book, these games, the videos or these instructables.</p>
+<p>If you want to get a hold of me to say something nice, call 911 on the phone below.
+If you want to get a hold of me to offer me a job, call 611 on the phone below, when I answer, whisper your financial benefits and hang up before the beep.
+</p>
+
+</div>
 
 -->
-            
-<!------------------------------------------------------------------------------------------------------------------->
 
-
-<!------------------------------------------------------------------------------------------------------------------->
-         
-
-            
-<!------------------------------------------------------------------------------------------------------------------->
 
 
 
 
 <!------------------------------------------------------------------------------------------------------------------->
-            <!--CHAT BOX FLOWXO-->
+            <!--CHAT BOX FLOWXO
             <iframe src="https://fxo.io/m/6ax3am7p" id="flowXOchatbox" style="" allowfullscreen></iframe>
-<!------------------------------------------------------------------------------------------------------------------->
-
-                                    
-<!------------------------------------------------------------------------------------------------------------------->
-            <!--PHONE BOX FLOWXO-->
-            <iframe id="phoneBFTF" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
-<!------------------------------------------------------------------------------------------------------------------->
-
+-->
+<div class="footer">     
 
 <!------------------------------------------------------------------------------------------------------------------->
-            <!--- CHEST POP-UP --->
-                
-              <!-- Trigger/Open The Modal -->
-            <button id="padlockButton" onclick="chesty();"></button>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-            
-            <!-- CLOSE MODAL BUTTON -->
-            <div id="yout" style="width: 3vw; height: 3vw; margin: 0; padding: 0; background-color: transparent; z-index: 100; float: right; background-image: url('assets/images/x.png'); background-size: cover; background-repeat: none;" onclick="closePadlock()"></div>
+            <!--PHONE BOX FLOWXO
+            <iframe id="phoneBFTF" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>-->
+<!------------------------------------------------------------------------------------------------------------------->
 
 
-            <iframe src="assets/chestPadlock/index.html" id="padlockIframe"  allowfullscreen></iframe>
-            </div>
-
-            </div>
 
 
-           
- <!------------------------------------------------------------------------------------------------------------------->               
-
-
+</div>
 
 
 
@@ -106,7 +155,12 @@
     
 
 
-    
+   <!--
+References
+
+https://codepen.io/vcmg/pen/LVRBdP    coffee steam
+https://9elements.github.io/fancy-border-radius/ blob
+-->
 
   
         
@@ -115,3 +169,7 @@
 </body>
 
 </html>
+
+
+
+

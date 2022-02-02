@@ -1,66 +1,103 @@
-
-
-function clickFunc(parameter){
-  console.log(parameter)
-}
-
-
-
-
-window.onload = (() => {
-
-    
-    //let storage = window.localStorage;
-
-    //let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
-    //let correctOrder = ['BEER', 'ANTHROPOLOGY', 'CHAMPAGNE', 'CHICKEN', 'COGNAC', 'ELK', 'FISH', 'GOETHE', 'HERBOLOGY', 'KAFKA', 'NIETZSCHE', 'PSYCHOLOGY', 'RABBIT', 'THEOLOGY', 'TOLSTOY', 'VODKA', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
-    let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',    'THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE'];
-
-
-    let dropzones = document.querySelectorAll('.dropzone');
-
-    let droppable = new Draggable.Swappable(
-        dropzones,
-        {
-            draggable: '.draggable',
-            dropzone: '.dropzone',
-            mirror: { constrainDimensions: true }
+/*
+var words = ['books', 'interactive websites', 'videos', 'instructables', 'escape games'],
+    part,
+    i = 0,
+    offset = 0,
+    len = words.length,
+    forwards = true,
+    skip_count = 0,
+    skip_delay = 25,
+    speed = 150;
+var wordflick = function () {
+  setInterval(function () {
+    if (forwards) {
+      if (offset >= words[i].length) {
+        ++skip_count;
+        if (skip_count == skip_delay) {
+          forwards = false;
+          skip_count = 0;
         }
-    );
+      }
+    }
+    else {
+      if (offset == 0) {
+        forwards = true;
+        i++;
+        offset = 0;
+        if (i >= len) {
+          i = 0;
+        }
+      }
+    }
+    part = words[i].substr(0, offset);
+    if (skip_count == 0) {
+      if (forwards) {
+        offset++;
+      }
+      else {
+        offset--;
+      }
+    }
+    $('.word').text(part);
+  },speed);
+};
 
-
-
-
-
- openIntroVideoFunction();
-
-
-
-
-
-
-    
-
+$(document).ready(function () {
+  wordflick();
 });
+*/
 
-function arraysEqual(a1, a2) {
-    /* WARNING: arrays must not contain {objects} or behavior may be undefined */
-    return JSON.stringify(a1) == JSON.stringify(a2);
-}
+var l = 0;
+var vid = document.getElementById('videowindow');
+ 
 
-$(function () {
-    var $curParent, Content;
-    $(document).delegate("span", "click", function () {
-        if ($(this).closest("s").length) {
-            Content = $(this).parent("s").html();
-            $curParent = $(this).closest("s");
-            $(Content).insertAfter($curParent);
-            $(this).closest("s").remove();
+
+
+
+
+function activateOne() { 
+     document.getElementById('optionOne').style.display ='block';
+  document.getElementById('optionTwo').style.display ='none';
+  document.getElementById('optionThree').style.display ='none';
+
+
+              }   
+
+
+function activateTwo() {
+  document.getElementById('optionOne').style.display ='none';
+  document.getElementById('optionTwo').style.display ='block';
+  document.getElementById('optionThree').style.display ='none';
+  }
+
+function activateThree() {
+  document.getElementById('optionOne').style.display ='none';
+  document.getElementById('optionTwo').style.display ='none';
+  document.getElementById('optionThree').style.display ='block';
+  }
+
+
+
+
+
+
+
+
+function playVideo() {
+  if (l === 0) {
+    $('#videowindow').trigger('play');
+    l = 1;
+  } else {
+    $('#videowindow').trigger('pause');
+    l = 0;
+  }
+
+  if (vid.paused == true) {
+    document.getElementById('videoButtonId').className = "videoButtonPlayClass";
+  
+          } else {//document.getElementById('temp').style.display = 'block';
+                  document.getElementById('videoButtonId').className = "videoButtonPauseClass";
         }
-        else {
-            $(this).wrapAll("<s />");
-        }
-    });
-});
+} 
 
 
