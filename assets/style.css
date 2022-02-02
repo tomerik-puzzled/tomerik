@@ -14,10 +14,10 @@ body {color: white;}
         /*  vertical  */
 @media only screen and (orientation: portrait) {
   body {
-  background-image: url('images/backgroundHV.jpg'), url('');
+  background-image: url('images/backgroundHVextended.jpg'), url('');
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100vw calc(100vw * 1.2);;
+  background-size: 100vw calc(100vw * 2);;
   width: 100vw;
   max-height: 800px;
   }
@@ -28,7 +28,7 @@ body {color: white;}
 
 .insideTVframe {
   position: absolute;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 1.0);
   top: 20.7vw;
   left: 9.5vw;
 border-radius: 36% 7% 7% 22% / 19% 10% 53% 31%;
@@ -41,13 +41,13 @@ height:  calc(18.3vw * 1.5);
     /*  HORIZONTAL  */
 @media only screen and (orientation: landscape) {
   body {
-  background-image: url('images/backgroundHV.jpg'), url('');
+  background-image: url('images/backgroundHVextended.jpg'), url('');
   background-position: center top;
   background-repeat: no-repeat;
  
-  background-size: 100vw calc(100vw * 1.2);
+  background-size: 100vw calc(100vw * 2);
   width: 100vw;
-  height: calc(100vw * 1.2);
+  height: calc(100vw * 2);
   
   }
 
@@ -159,6 +159,7 @@ button {
   cursor: pointer;
   transition-delay: 0,5s;
   outline: none;
+  z-index: 2;
 }
 button:hover {
   background-color: rgba(0,0,255,0.3);
@@ -333,13 +334,15 @@ line-height: 2.2;
             overflow: hidden;
             border:0px solid yellow; 
             background-color: rgba(0,0,0,0.0); 
-            width: 30vw; 
-            height: calc(30vw*0.63); 
-            position: relative; 
-            
+            width: 40vw; 
+            height: calc(40vw*0.63); 
+            position: absolute; 
+            left: 10vw; 
+            top: 78vw; 
             overflow-y: none;
             overflow-x: none;
             cursor: pointer;
+            z-index: 10;
           }
 
 
