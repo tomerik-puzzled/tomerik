@@ -47,20 +47,21 @@ $(document).ready(function () {
 });
 */
 
-var l = 0;
+var lfour = 0;
+var lthree = 0;
 var vid = document.getElementById('videowindow');
- 
 
+var vid3 = document.getElementById('optionThree'); 
+var vid4 = document.getElementById('optionFour');
 
 
 
 
 function activateOne() { 
-     document.getElementById('optionOne').style.display ='block';
+  document.getElementById('optionOne').style.display ='block';
   document.getElementById('optionTwo').style.display ='none';
   document.getElementById('optionThree').style.display ='none';
-
-
+  document.getElementById('optionFour').style.display ='none';
               }   
 
 
@@ -68,15 +69,48 @@ function activateTwo() {
   document.getElementById('optionOne').style.display ='none';
   document.getElementById('optionTwo').style.display ='block';
   document.getElementById('optionThree').style.display ='none';
+  document.getElementById('optionFour').style.display ='none';
   }
 
 function activateThree() {
   document.getElementById('optionOne').style.display ='none';
   document.getElementById('optionTwo').style.display ='none';
   document.getElementById('optionThree').style.display ='block';
+  document.getElementById('optionFour').style.display ='none';
+    $('#optionFour').trigger('pause');
+    $('#optionthree').trigger('play');
+  var x = document.getElementById("optionThree");x.play();
+
+
+  }
+
+function activateFour() {
+  document.getElementById('optionOne').style.display ='none';
+  document.getElementById('optionTwo').style.display ='none';
+  document.getElementById('optionThree').style.display ='none';
+  document.getElementById('optionFour').style.display ='block';
+  playVideo4();
   }
 
 
+
+
+function playVideo4() {
+  if (lfour === 0) {
+    $('#optionFour').trigger('play');
+    lfour = 1;
+  } else {
+    $('#optionFour').trigger('pause');
+    lfour = 0;
+  }
+
+  if (vid.paused == true) {
+    document.getElementById('videoButtonId').className = "videoButtonPlayClass";
+  
+          } else {//document.getElementById('temp').style.display = 'block';
+                  document.getElementById('videoButtonId').className = "videoButtonPauseClass";
+        }
+} 
 
 
 
