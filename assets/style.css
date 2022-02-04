@@ -147,7 +147,7 @@ height:  calc(18.3vw * 1.5);
 
 button {
   position: absolute;
-  left: 52.6vw;
+  left: 48.6vw;
 
   background-color: rgba(0,255,255,0.3);
   border: solid white 2px;
@@ -159,7 +159,7 @@ button {
   cursor: pointer;
   transition-delay: 0,5s;
   outline: none;
-  z-index: 2;
+  z-index: 24;
 }
 button:hover {
   background-color: rgba(0,0,255,0.3);
@@ -168,10 +168,10 @@ button:hover {
 
 button:focus {outline:0;}
 
-.buttonOne {top: 26.4vw; left: 52.1vw;}
-.buttonTwo {top: 30.1vw; left: 52.3vw;}
-.buttonThree { top: 33.9vw; left: 52.1vw;}
-.buttonFour { top: 38.2vw; left: 52.2vw;}
+.buttonOne {top: 26.4vw; left: ;}
+.buttonTwo {top: 30.1vw; left: ;}
+.buttonThree { top: 33.9vw; left: ;}
+.buttonFour { top: 38.2vw; left: ;}
 
 
 .videoDisplayClass {
@@ -212,7 +212,7 @@ button:focus {outline:0;}
         min-height: 40vw;
         border: double black 3px;
         background-color: white;
-        z-index: 1;
+        z-index: 70;
        
         }
 
