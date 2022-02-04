@@ -14,7 +14,7 @@ body {color: white;}
         /*  vertical  */
 @media only screen and (orientation: portrait) {
   body {
-  background-image: url('images/backgroundHVextended.jpg'), url('');
+  background-image: url('images/backgroundHVextendedCart.jpg'), url('');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100vw calc(100vw * 2);;
@@ -168,7 +168,7 @@ button:hover {
 
 button:focus {outline:0;}
 
-.buttonOne {top: 26.4vw; left: 52.5vw;}
+.buttonOne {top: 26.4vw; left: 52.1vw;}
 .buttonTwo {top: 30.1vw; left: 52.3vw;}
 .buttonThree { top: 33.9vw; left: 52.1vw;}
 .buttonFour { top: 38.2vw; left: 52.2vw;}
@@ -195,13 +195,19 @@ button:focus {outline:0;}
 }
 
 
-.SoundBarzClass {
-  position: absolute; 
-  left: -0vw;
-        padding-top: 0vh;
-        width: calc(64vh * (16/9));
-        height: 80vh;
-        border: solid orange 0px;
+
+
+
+
+
+.popUp {
+    position: relative; 
+    left: 10vw;
+        
+        width: 60vw;
+        height: 40vw;
+        border: solid orange 3px;
+        background-color: yellow;
        
         }
 
@@ -220,6 +226,7 @@ button:focus {outline:0;}
 }
 
 #steam-one {
+  background-color:  red;
   -webkit-animation: steam-one 7s ease-out infinite;
   animation: steam-one 6s ease-out infinite;
 }

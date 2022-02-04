@@ -46,17 +46,22 @@
 
 <img src="assets/images/greenPlant.png" style="width: 30vw;
   height: calc(width * 100); position: absolute; top: 0vw; left: 0vw; z-index: 65;">
-<!--
+
 <img src="assets/images/steelRod.png" style="width: 1.2vw;
-  height: calc(width * 100); position: absolute; top: 0; left: 11vw; z-index: 60;">
--->
-<img src="assets/images/sharksWithBook.png" style="width: 30vw; height: calc(width * 1.2);
-  height: calc(width * 100); position: absolute; top: 79vw; left: 53vw; z-index: 55;">
-  
+  height: calc(100vw * 2); position: absolute; top: 0; left: 11vw; z-index: 60;">
+
+<img src="assets/images/sharksWithBook.png" onclick="openBook();" style="width: 30vw;
+  height: calc(width * 100); position: absolute; z-index: 65; cursor: pointer; width: 40vw; height: auto; 
+  top: 81vw; left: 45vw; z-index: 55; ">
+
+<img src="assets/images/futureBox.png" onclick="openBook();" style="width: 30vw;
+  height: calc(width * 100); position: absolute; z-index: 65; cursor: crosshair; width: 35vw; height: auto; 
+  top: 108vw; left: 9vw; z-index: 55; ">
+
 
 <h3 class="hideMe" style="font-size: 80px; text-align: center; z-index: 100;">VERTICAL</h3>
 
-<h2 class="hideMe" style="font-size: 80px; text-align: center; z-index: 100;">HORIZONTAL</h2>
+<h2 class="hideMe" style="font-size: 80px; text-align: center; z-index: -4;">HORIZONTAL</h2>
 
 
 
@@ -99,7 +104,7 @@
 <source src="assets/videos/vid-182.mp4" type="video/mp4">
 </video> 
 
-
+<div hidden id="bookPopUp" class="popUp"></div>
 
 
 <!--

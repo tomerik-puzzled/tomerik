@@ -55,6 +55,10 @@ var vid3 = document.getElementById('optionThree');
 var vid4 = document.getElementById('optionFour');
 
 
+function openBook() {
+  document.getElementById('bookPopUp').style.display ='block';
+}
+
 
 
 function activateOne() { 
