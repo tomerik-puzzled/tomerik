@@ -1,3 +1,7 @@
+
+
+
+
 /*
 var words = ['books', 'interactive websites', 'videos', 'instructables', 'escape games'],
     part,
@@ -53,6 +57,8 @@ var vid = document.getElementById('videowindow');
 
 var vid3 = document.getElementById('optionThree'); 
 var vid4 = document.getElementById('optionFour');
+
+
 
 
 function openBook() {
@@ -137,5 +143,9 @@ function playVideo() {
                   document.getElementById('videoButtonId').className = "videoButtonPauseClass";
         }
 } 
+
+function closeModal() {
+    document.getElementById('bookPopUp').style.display ='none';
+}
 
 
