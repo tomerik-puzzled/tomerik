@@ -84,6 +84,8 @@ padding: 0;
 
 
 
+
+
 .insideTVframe {
   position: absolute;
   background-color: rgba(0, 0, 0, 1.0);
@@ -383,17 +385,30 @@ line-height: 2.2;
           }
 
 
+#sharkIframe { 
+            overflow: hidden;
+            border:0px solid yellow; 
+            background-color: rgba(0,0,0,0.0); 
+            width: 70vw; 
+            height: calc(40vw*0.63); 
+            position:relative; 
+            margin-left: 10vw;
+            margin-right: 10vw;
+            overflow-y: none;
+            overflow-x: none;
+            cursor: pointer;
+            z-index: 100;
+          }
 
 
 
 
 
-/*actual text
-h2 
+h1
 {
           font-family: Metrophobic;
           color: white;
-          font-size: 1.5vw;
+          font-size: 3vw;
           display: flex;
           font-variant-caps: small-caps;
           border: solid orange 0px;
@@ -406,7 +421,7 @@ h2
           padding: 1vw;
          
 }
-*/
+
 p 
 {
           font-family: Metrophobic;
