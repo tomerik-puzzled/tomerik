@@ -8,9 +8,9 @@ body {
 .book {
   width: 80vw;
   height: 32vw;
-  background: rgba(0,0,0,0.0);
+  background: rgba(0,255,0,0.0);
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);

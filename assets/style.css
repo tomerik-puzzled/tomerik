@@ -238,8 +238,8 @@ button:focus {outline:0;}
         min-width: 60vw;
         max-width: 90vw;
         min-height: 40vw;
-        border: double black 3px;
-        background-color: white;
+        border: double black 10px;
+        background-color: rgba(255, 255, 255, 1.0);
         z-index: 70;
        
         }
@@ -389,11 +389,10 @@ line-height: 2.2;
             overflow: hidden;
             border:0px solid yellow; 
             background-color: rgba(0,0,0,0.0); 
-            width: 70vw; 
-            height: calc(40vw*0.63); 
+            width: 80vw; 
+            height: calc(80vw*0.6); 
             position:relative; 
-            margin-left: 10vw;
-            margin-right: 10vw;
+bottom: 2vw;
             overflow-y: none;
             overflow-x: none;
             cursor: pointer;
