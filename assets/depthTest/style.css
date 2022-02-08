@@ -5,24 +5,3 @@ body {
   overflow: hidden;
 }
 
-.horizon {
-  width: 100vw;
-  height: 32vw;
-  background: rgba(0,255,0,1.0);
-  position: absolute;
-  border: black solid 0px;
-}
-
-
-.foreground {
-  border-bottom: 1000vw solid #555;
-  border-left: 10vw solid transparent;
-  border-right: 10vw solid transparent;
-  height: 0px;
-  width: 1000vw;
-  position: absolute;
-  bottom: 12px;
-}
-
-
-

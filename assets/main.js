@@ -145,7 +145,7 @@ function playVideo() {
 } 
 
 function closeModal() {
-    document.getElementById('bookPopUp').style.display ='none';
+    document.getElementById('modalTotal').style.display ='none';
 }
 
 

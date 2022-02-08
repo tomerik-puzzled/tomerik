@@ -9,15 +9,7 @@ body {color: white;}
   box-sizing: border-box;
 }
 
-.trapezoid {
-  border-bottom: 50px solid #555;
-  border-left: 10vh solid blue;
-  border-right: 10vh solid yellow;
-    border-top: 480px solid green;
-  height: 0;
-  width: 100%;
-  
-}
+
 
 
    /*  HORIZONTAL  */
@@ -48,7 +40,7 @@ padding: 0;
   cursor: pointer;
   transition-delay: 0,5s;
   outline: none;
-  z-index: 24;
+  z-index: 1;
 }
   }
 
@@ -236,32 +228,18 @@ button:focus {outline:0;}
 
 
 
-.popUp {
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 5vw; 
-      margin-left: 10%;
-      margin-right: 10%;
-        
-        min-width: 60vw;
-        max-width: 90vw;
-        min-height: 40vw;
-        border: double black 10px;
-        background-color: rgba(255, 255, 255, 1.0);
-        z-index: 70;
-       
-        }
+
 
 
 
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: white;
   float: right;
-  font-size: 28px;
+  font-size: 400px;
   font-weight: bold;
-  z-index: 2;
+  z-index: 100;
 }
 
 .close:hover,
@@ -377,6 +355,7 @@ line-height: 2.2;
   line-height: 2.2;
 }
 
+
 #phoneBFTF { 
             overflow: hidden;
             border:0px solid yellow; 
@@ -392,22 +371,39 @@ line-height: 2.2;
             z-index: 10;
           }
 
+.popUp {
+  
+      position: relative;
+      
+     
+      margin-left: 10%;
+      margin-right: 10%;
+        
+        min-width: 60vw;
+        max-width: 600px;
+        min-height: 40vw;
+        border: ridge black 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
 
 #sharkIframe { 
             overflow: hidden;
-            border:0px solid yellow; 
-            background-color: rgba(0,0,0,0.0); 
-            width: 80vw; 
-            height: calc(80vw*0.6); 
-            position:relative; 
-bottom: 2vw;
-            overflow-y: none;
+            border:3px solid hotpink; 
+            background-color: rgba(0,255,0,0.0); 
+            width: 100%; 
+            height: 100%; 
+            position: absolute;
+          
+      
+        
+      
+             overflow-y: none;
             overflow-x: none;
             cursor: pointer;
-            z-index: 100;
+            z-index: 2;
           }
-
-
 
 
 

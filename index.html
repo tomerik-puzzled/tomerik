@@ -36,11 +36,11 @@
 </div>
 
 <img src="assets/images/redTelevision.png" style="width: 56vw; height: calc(width * 1.2);
-  height: calc(width * 100); position: absolute; top: 18vw; left: 7vw; z-index: 3;">
+  height: calc(width * 100); position: absolute; top: 18vw; left: 7vw; z-index: 1;">
 
 
 <img src="assets/images/coffeeCup1.png" style="width: 20vw; height: calc(width * 1.2);
-  height: calc(width * 100); position: absolute; top: 39vw; left: 63vw; z-index: 55;">
+  height: calc(width * 100); position: absolute; top: 39vw; left: 63vw; z-index: 5;">
 
 <img src="assets/images/shelfFullSize.png" style="width: 100vw; height: calc(width * 1.2);
   height: calc(width * 100); position: absolute; top: -0.5vw; left: 0vw; z-index: -1;">
@@ -49,18 +49,18 @@
   height: calc(width * 100); position: absolute; top: -1vw; left: 56vw; z-index: -2;">
 
 <img src="assets/images/greenPlant.png" style="width: 30vw;
-  height: calc(width * 100); position: absolute; top: 0vw; left: 0vw; z-index: 65;">
+  height: calc(width * 100); position: absolute; top: 0vw; left: 0vw; z-index: 6;">
 
 <img src="assets/images/steelRod.png" style="width: 1.2vw;
-  height: calc(100vw * 2); position: absolute; top: 0; left: 11.6vw; z-index: 60;">
+  height: calc(100vw * 2); position: absolute; top: 0; left: 11.6vw; z-index: 7;">
 
 <img src="assets/images/bookTemp.png" onclick="openBook();" style="width: 30vw;
   height: calc(width * 100); position: absolute; z-index: 65; cursor: pointer; width: 40vw; height: auto; 
-  top: 70vw; left: 45vw; z-index: 55; ">
+  top: 70vw; left: 45vw; z-index: 5; ">
 
 <img src="assets/images/futureBox.png" onclick="openBook();" style="width: 30vw;
   height: calc(width * 100); position: absolute; z-index: 65; cursor: crosshair; width: 35vw; height: auto; 
-  top: 108vw; left: 9vw; z-index: 55; ">
+  top: 108vw; left: 9vw; z-index: 5; ">
 
 
 <h3 class="hideMe" style="font-size: 80px; text-align: center; z-index: 100;">VERTICAL</h3>
@@ -110,19 +110,21 @@
 
 
 
+<div hidden id="modalTotal" class="surroundings" style="background-color: rgba(0, 0, 0, 0.2); width: 100vw; height: 100vh; position: absolute; left: 0px; top: 0px; backdrop-filter: blur(5px); z-index: 2;">
+    <div id="bookPopUp" class="popUp">
+        
+        
 
-<div id="bookPopUp" class="popUp">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div class="trapezoid"> 
         <iframe id="sharkIframe" src="assets/flipSharks/index.html" style="" scrolling="no" allowfullscreen></iframe>
+        <span class="close" onclick="closeModal()">&times;</span>
     </div>
-    
-<!--
+</div>
+<!--<div class="inMiddle"></div>
     <h1 style="color: black; text-align: center;">THE FLOOR IS FULL OF SHARKS</h1>
     
     
     -->
-</div>
+
 
 
 <script>
