@@ -9,7 +9,15 @@ body {color: white;}
   box-sizing: border-box;
 }
 
-
+.trapezoid {
+  border-bottom: 50px solid #555;
+  border-left: 10vh solid blue;
+  border-right: 10vh solid yellow;
+    border-top: 480px solid green;
+  height: 0;
+  width: 100%;
+  
+}
 
 
    /*  HORIZONTAL  */
