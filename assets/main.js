@@ -62,7 +62,7 @@ var vid4 = document.getElementById('optionFour');
 
 
 function openBook() {
-  document.getElementById('bookPopUp').style.display ='block';
+  document.getElementById('modalTotal').style.display ='block';
 }
 
 

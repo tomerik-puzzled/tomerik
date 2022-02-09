@@ -35,6 +35,19 @@
   <div class="steam" id="steam-four"></div>  
 </div>
 
+<img src="assets/images/virtualGlasses.png" style="width: 30vw;
+  height: calc(width * 100); position: absolute; top: 3vw; left: 26vw; z-index: -2;">
+
+<video id="virtualTest" class="insideVirtualframe" style="" autoplay="" loop muted="" webkit-playsinline playsinline>
+<source src="assets/videos/square1.mp4" type="video/mp4">
+</video> 
+
+<video id="virtualTest" class="insideVirtualframeRight" style="" autoplay="" loop muted="" webkit-playsinline playsinline>
+<source src="assets/videos/square1.mp4" type="video/mp4">
+</video> 
+
+
+
 <img src="assets/images/redTelevision.png" style="width: 56vw; height: calc(width * 1.2);
   height: calc(width * 100); position: absolute; top: 18vw; left: 7vw; z-index: 1;">
 
@@ -110,14 +123,15 @@
 
 
 
-<div hidden id="modalTotal" class="surroundings" style="background-color: rgba(0, 0, 0, 0.2); width: 100vw; height: 100vh; position: absolute; left: 0px; top: 0px; backdrop-filter: blur(5px); z-index: 2;">
-    <div id="bookPopUp" class="popUp">
-        
-        
-
+<div hidden id="modalTotal" class="surroundings" style="">
+    <div class="module-border-wrap"><div class="module">
         <iframe id="sharkIframe" src="assets/flipSharks/index.html" style="" scrolling="no" allowfullscreen></iframe>
         <span class="close" onclick="closeModal()">&times;</span>
-    </div>
+
+        
+
+</div>
+</div>
 </div>
 <!--<div class="inMiddle"></div>
     <h1 style="color: black; text-align: center;">THE FLOOR IS FULL OF SHARKS</h1>
@@ -130,7 +144,7 @@
 <script>
     
 // Get the modal
-var modal = document.getElementById("bookPopUp");
+var modal = document.getElementById("modalTotal");
 
 
 // When the user clicks on <span> (x), close the modal
@@ -189,7 +203,7 @@ If you want to get a hold of me to offer me a job, call 611 on the phone below, 
             
             <iframe id="phoneBFTF" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
 <!------------------------------------------------------------------------------------------------------------------->
-
+    
 
 
 
