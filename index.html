@@ -133,11 +133,9 @@
 </div>
 </div>
 </div>
-<!--<div class="inMiddle"></div>
-    <h1 style="color: black; text-align: center;">THE FLOOR IS FULL OF SHARKS</h1>
+
     
-    
-    -->
+   
 
 
 
@@ -189,8 +187,16 @@ If you want to get a hold of me to offer me a job, call 611 on the phone below, 
 
 -->
 
+<!--
 
-
+<div id="modalTotal" class="phoneSurroundings" style="">
+    <div class="phoneModule-border-wrap"><div class="module">
+        <iframe id="phoneIframeModal" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
+        <span class="close" onclick="closeModal()">&times;</span>
+</div>
+</div>
+</div>
+-->
 
 
 <!------------------------------------------------------------------------------------------------------------------->
@@ -201,12 +207,21 @@ If you want to get a hold of me to offer me a job, call 611 on the phone below, 
 
 <!------------------------------------------------------------------------------------------------------------------->
             
-            <iframe id="phoneBFTF" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
+            <iframe id="phoneBFTF" class="vintagePhone" src="assets/BFTF-Phone/index.html" scrolling="no" allowfullscreen></iframe>
 <!------------------------------------------------------------------------------------------------------------------->
-    
+            <iframe id="phoneBFTFphone" class="vintagePhone" onclick="openPhoneiFrame();"src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
+
+<script>
+    function openPhoneiFrame() {
+  document.getElementById('phoneBFTFphone').className += ' largePhone';
+}
+</script>
 
 
-
+<!--    
+            <div id="phoneDiv" class="phoneIframe" onclick="openPhone()" src="" style="width: 100px; left: 100px; background-color: red;" scrolling="no" allowfullscreen></div>
+-->
+            
 
 
 

@@ -65,6 +65,13 @@ function openBook() {
   document.getElementById('modalTotal').style.display ='block';
 }
 
+function openPhone() {
+  document.getElementById('modalPhone').style.display ='block';
+}
+
+function openPhoneiFrame() {
+  document.getElementById('phoneBFTFphone').className = 'largePhone';
+}
 
 
 function activateOne() { 
