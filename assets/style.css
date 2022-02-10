@@ -84,8 +84,8 @@ padding: 0;
 .insideVirtualframe {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.0);
-  top: 5.5vw;
-  left: 31.2vw;
+  top: 140.5vw;
+  left: 61.2vw;
 border-radius: 100%;
 overflow: hidden;
 -webkit-transform: translateZ(0);
@@ -99,8 +99,8 @@ opacity: 0.4;
 .insideVirtualframeRight {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.0);
-  top: 5.5vw;
-  left: 44.9vw;
+  top: 140.5vw;
+  left: 74.9vw;
 border-radius: 100%;
 overflow: hidden;
 -webkit-transform: translateZ(0);
