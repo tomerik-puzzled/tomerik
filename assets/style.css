@@ -9,8 +9,24 @@ body {color: white;}
   box-sizing: border-box;
 }
 
-
-
+/*
+p 
+{
+          font-family: Metrophobic;
+          color: green;
+          font-size: 1.2vw;
+          display: flex;
+          font-variant-caps: small-caps;
+          border: solid orange 0px;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          align-content: center;
+          vertical-align: center;
+          padding-left: 1vw;
+          padding-right: 1vw;
+}
+*/
 
    /*  HORIZONTAL  */
 @media only screen and (orientation: landscape) {
@@ -28,7 +44,7 @@ body {color: white;}
   button {
   position: absolute;
   left: 48.6vw;
-padding: 0;
+  padding: 0;
   margin: 0;
   background-color: rgba(0,255,255,0.3);
   border: solid white 2px;
@@ -75,10 +91,8 @@ padding: 0;
   outline: none;
   z-index: 24;
 }
-
-
-
 }
+
 
 
 .insideVirtualframe {
@@ -120,11 +134,57 @@ opacity: 0.4;
 border-radius: 36% 7% 7% 8% / 19% 10% 53% 8%;
 width: 36.5vw; 
 height:  calc(18.3vw * 1.5);
+word-wrap: break-word;
+
 }
 
 
+.scrollingText {
+z-index: 2;
+padding: 2vw;
+padding-left: 2vw;
+}
 
- 
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+
+h6, p {
+  border-right: solid 0.3vw rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+     
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 1.5vw;
+  color: rgba(10,255,20,.70);
+  font-weight: normal;
+}
+
+/* Animation */
+h6 {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+
+p{border-right: solid 0vw rgba(0,255,0,.75); white-space: nowrap;}
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+
 
 
 
@@ -177,7 +237,7 @@ height:  calc(18.3vw * 1.5);
   overflow: hidden;
   z-index: 5;
 }
-
+/*
 .bd {
   width: 100%;
   height: 100%;
@@ -197,7 +257,7 @@ height:  calc(18.3vw * 1.5);
   opacity: 1;
   z-index: 2;
 }
-
+*/
 
 #background-video {
   width: 100%;
@@ -370,7 +430,7 @@ line-height: 2.2;
 .vintagePhone { 
             overflow: hidden;
             border:0px solid yellow; 
-            background-color: rgba(255,0,0,0.0); 
+            background-color: rgba(255,255,0,0.0); 
             width: 40vw; 
             height: calc(40vw*0.63); 
             position: absolute; 
@@ -379,37 +439,32 @@ line-height: 2.2;
             overflow-y: none;
             overflow-x: none;
             cursor: pointer;
-            z-index: 100;
+            z-index: 90;
           }
 
 .largePhone { 
             width: 90vw; 
             height: calc(90vw*0.63);
+            z-index: 100;
           }
-#phoneBFTFphone { 
+#phoneOverlay { 
             
-            background-color: red; 
-            
+            background-color: rgba(0, 0, 0, 0.0); 
+            z-index: 95;
           }
 
 @media only screen and (max-width: 600px) {
-  #phoneBFTF {
-    display: none;
-  }
-
-  #phoneBFTFphone {
+  #phoneOverlay {
     display: block;
   }
+
+
 }
 
 @media only screen and (min-width: 601px) {
-  #phoneBFTF {
-    display: block;
-  }
+  #phoneOverlay {display: none;}
 
-  #phoneBFTFphone {
-    display: none;
-  }
+  #phoneBFTFphone {display: none;}
 }
 
 
@@ -558,22 +613,7 @@ h1
          
 }
 
-p 
-{
-          font-family: Metrophobic;
-          color: white;
-          font-size: 1.2vw;
-          display: flex;
-          font-variant-caps: small-caps;
-          border: solid orange 0px;
-          justify-content: center;
-          text-align: center;
-          align-items: center;
-          align-content: center;
-          vertical-align: center;
-          padding-left: 1vw;
-          padding-right: 1vw;
-}
+
 
 
 

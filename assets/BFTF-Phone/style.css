@@ -41,15 +41,17 @@ canvas {
           
 }
 
+h1 {font-size: 3vw;}
+
 .numDispClass {  position: absolute;
-            top: 10%;
-            left: 40%:
-            margin-left: 60%;
-            padding-left: 60%;
-            margin-top: 0%;
-            padding-top: 20%;
-            margin-bottom: auto;
-            padding-bottom: auto;
+            top: 16vw;
+            left: 34vw;
+            color: green;
+            width: 16vw;
+            padding-left: 3vw;
+            
+            border: 0.3vw solid rgba(40, 40, 0, 1.0);
+            background-color: rgba(0, 0, 0, 0.8);
           
         }
 

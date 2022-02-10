@@ -1,56 +1,6 @@
 
 
 
-
-/*
-var words = ['books', 'interactive websites', 'videos', 'instructables', 'escape games'],
-    part,
-    i = 0,
-    offset = 0,
-    len = words.length,
-    forwards = true,
-    skip_count = 0,
-    skip_delay = 25,
-    speed = 150;
-var wordflick = function () {
-  setInterval(function () {
-    if (forwards) {
-      if (offset >= words[i].length) {
-        ++skip_count;
-        if (skip_count == skip_delay) {
-          forwards = false;
-          skip_count = 0;
-        }
-      }
-    }
-    else {
-      if (offset == 0) {
-        forwards = true;
-        i++;
-        offset = 0;
-        if (i >= len) {
-          i = 0;
-        }
-      }
-    }
-    part = words[i].substr(0, offset);
-    if (skip_count == 0) {
-      if (forwards) {
-        offset++;
-      }
-      else {
-        offset--;
-      }
-    }
-    $('.word').text(part);
-  },speed);
-};
-
-$(document).ready(function () {
-  wordflick();
-});
-*/
-
 var lfour = 0;
 var lthree = 0;
 var vid = document.getElementById('videowindow');
@@ -65,12 +15,10 @@ function openBook() {
   document.getElementById('modalTotal').style.display ='block';
 }
 
-function openPhone() {
-  document.getElementById('modalPhone').style.display ='block';
-}
 
-function openPhoneiFrame() {
-  document.getElementById('phoneBFTFphone').className = 'largePhone';
+ function openPhoneiFrame() {
+  document.getElementById('phoneBFTF').className += ' largePhone';
+
 }
 
 
@@ -79,19 +27,22 @@ function activateOne() {
   document.getElementById('optionTwo').style.display ='none';
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='none';
+  document.getElementById('about').style.display ='none';
               }   
 
 
 function activateTwo() {
   document.getElementById('optionOne').style.display ='none';
-  document.getElementById('optionTwo').style.display ='block';
+  //document.getElementById('optionTwo').style.display ='block';
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='none';
+  document.getElementById('about').style.display ='block';
   }
 
 function activateThree() {
   document.getElementById('optionOne').style.display ='none';
   document.getElementById('optionTwo').style.display ='none';
+  document.getElementById('about').style.display ='none';
   document.getElementById('optionThree').style.display ='block';
   document.getElementById('optionFour').style.display ='none';
     $('#optionFour').trigger('pause');
@@ -104,6 +55,7 @@ function activateThree() {
 function activateFour() {
   document.getElementById('optionOne').style.display ='none';
   document.getElementById('optionTwo').style.display ='none';
+  document.getElementById('about').style.display ='none';
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='block';
   playVideo4();

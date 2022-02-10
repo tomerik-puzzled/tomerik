@@ -520,6 +520,7 @@ let dtmfPlayer = new DtmfPlayer();
 const keypad = document.getElementById("keypad");
 let numbers = [];
 
+
 const lightningfx = new Audio('assets/lightning.mp3');
 const excellent = new Audio("assets/eaexcellent.mp3");
 const secret1 = new Audio("assets/sec1.mp3");
@@ -542,11 +543,12 @@ keypad.addEventListener("mousedown", function (e) {
   if (key) {
     const val = key.value;
     stop();
-    document.getElementById("numDisp").innerHTML = key.value;
+    document.getElementById("numDisp").innerHTML = numbers + key.value;
 
     if (val === "*") {
       keypad.children[11].classList.add("active");
       if (!running) {
+        document.getElementById("numDisp").innerHTML = numbers;
         playAudio();
       }
     } else if (val === "∞") {
@@ -606,40 +608,7 @@ ctx.shadowColor = color;
 ctx.fillStyle = "hsla(0, 0%, 10%, 1.0)";
 ctx.fillRect(0, 0, c.width, c.height);
 
-function render() {
-  ctx.shadowBlur = 0, ctx.globalCompositeOperation = "source-over", ctx.fillRect(0, 0, c.width, c.width), ctx.globalCompositeOperation = "lighter", ctx.shadowBlur = 15;
-  let a = zap();
-  ctx.beginPath();
-  for (let b = 0; b < a.length; b++) ctx.lineTo(a[b].x, a[b].y);
-  ctx.stroke(), run = requestAnimationFrame(render), running = !0;
-}
 
-function zap() {
-  let a = max - center.y,
-  b = [];
-  b.push({
-    x: center.x,
-    y: center.y }),
-  b.push({
-    x: Math.random() * (c.width - 100) + 50,
-    y: max + 50 * (Math.random() - .9) });
-
-  for (let e = c.width / 5; a > minSegmentHeight;) {
-    const c = [];
-    for (let a = 0; a < b.length - 1; a++) {
-      const d = b[a],
-      f = b[a + 1],
-      g = (d.x + f.x) / 2,
-      h = g + (2 * Math.random() - 1) * e;
-      c.push(d, {
-        x: h,
-        y: (d.y + f.y) / 2 });
-
-    }
-    c.push(b.pop()), b = c, e /= 2, a /= 2;
-  }
-  return b;
-}
 
 function stop() {
   lightningfx.pause();
@@ -669,6 +638,9 @@ function stop() {
 
   running = false;
 }
+
+
+
 
 
 //   THE VARIOUS PHONE NUMBERS 
@@ -748,45 +720,6 @@ if ((numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] 
   numbers = [];
 }
 
-// END OF PHONE NUMBER AND AMOUNT OF NUMBERS
-
-
-
-/*/   THE VARIOUS PHONE NUMBERS 
-function playAudio() {  //1413 650 5803
-  if (numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] === 3 && numbers[4] === 6      && numbers[5] === 5 && numbers[6] === 0 &&            numbers[7] === 5 && numbers[8] === 8 && numbers[9] === 0 && numbers[10] === 3) {
-    secret2.play();
-  } 
-            else if (numbers[0] === 6 && numbers[1] === 9) {
-              secret1.currentTime = 0;
-              secret1.play();
-                      } else {
-                              if (numbers.length < 11 || numbers.length > 11) 
-                                  {
-                                    wrong.currentTime = 0;
-                                    wrong.volume = 0.3;
-                                    wrong.play();
-                                  } else {
-                                          excellent.currentTime = 0;
-                                          excellent.play();
-
-                                          setTimeout(() => {
-                                                            FIELD.stop();
-                                                            renderTunnel();
-                                                            render();
-                                                            audio.volume = 0.3;
-                                                            audio.currentTime = 0;
-                                                            audio.play();
-                                                            FIELD.star_speed = 10;
-                                                          }, 2000);
-                        }
-                      }
-
-  numbers = [];
-}
-
-// END OF PHONE NUMBER AND AMOUNT OF NUMBERS
-*/
 
 
 
@@ -802,81 +735,3 @@ m.y = null;
 ctx3.strokeStyle = '#fff';
 ctx3.translate(0.5, 0.5);
 
-// create stars
-function createStars(n) {
-
-  if (m.x == null) return;
-
-  for (var i = 0; i < n; i++) {
-    var shape = {
-      x: m.x,
-      y: m.y,
-      r: 1,
-      speed: 1,
-      accel: 1.01,
-      accel2: 0.001,
-      angle: Math.random() * 360 };
-
-
-    var vel = {
-      x: 25 * Math.cos(shape.angle * Math.PI / 180),
-      y: 25 * Math.sin(shape.angle * Math.PI / 180) };
-
-
-    shape.x += vel.x;
-    shape.y += vel.y;
-
-    stars.push(shape);
-  }
-}
-
-function renderTunnel() {
-  createStars(20);
-
-  var starfield = [];
-
-  ctx3.clearRect(0, 0, c3.width, c3.height);
-
-  r += 1;
-  if (r < 360) {
-    m = { x: c3.width / 2, y: c3.height / 2, angle: r };
-
-    var targetAngle = m.angle * Math.PI / 180;
-
-    m.x += 200 * Math.cos(targetAngle);
-    m.y += 200 * Math.sin(targetAngle);
-  } else {
-    r = 0;
-  }
-
-  while (stars.length) {
-    var star = stars.pop();
-
-    var vel = {
-      x: star.speed * Math.cos(star.angle * Math.PI / 180),
-      y: star.speed * Math.sin(star.angle * Math.PI / 180) };
-
-
-    ctx3.strokeStyle = `rgba(255,255,255,1.0)`;
-    ctx3.beginPath();
-    ctx3.moveTo(star.x, star.y);
-    ctx3.lineTo(star.x + vel.x, star.y + vel.y);
-    ctx3.closePath();
-    ctx3.stroke();
-
-    star.x += vel.x;
-    star.y += vel.y;
-
-    star.speed *= star.accel;
-
-    star.accel += star.accel2;
-
-    if (star.x < c3.width && star.x > 0 && star.y < c3.height && star.y > 0) {
-      starfield.push(star);
-    }
-  }
-
-  stars = starfield.slice(0).reverse();
-
-  tunnel = requestAnimationFrame(renderTunnel);
-}

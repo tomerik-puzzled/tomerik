@@ -16,8 +16,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 
-     <link rel="stylesheet" href="/assets/style.css">
+     
     <!--LOCAL LINKING-->
+    <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="assets/style.css">
     <script src="..assets/main.js"></script>
@@ -92,11 +93,17 @@
 
 
 
+<div hidden id="about" class="insideTVframe scrollingText"  style="display: block; overflow-wrap: break-word;">
+<p style="display: block; word-wrap: break-word; overflow-wrap: inherit">Hi, I'm Tom Erik. I make things. Like this website.Click on some, buttons,<br> 
+<br> see some of my work. 
 
 
+</p>
+<h6>Or play some of the games.</h6>
+</div>
 
 
-
+<div id="scrollingText" class="insideTVframe"></div>
 
 
 
@@ -104,10 +111,6 @@
 <source src="assets/videos/escobar.mp4" type="video/mp4">
 </video> 
 
-
-<div hidden id="optionText" class="insideTVframe">
-<h1 style="position: relative; left: 10%; top: 10%;">Option 2</h1>
-</div>
 
 <video hidden id="optionTwo" class="insideTVframe">
 <source src="assets/videos/middleProfessor.mp4" type="video/mp4">
@@ -173,18 +176,6 @@ My children's book "The Floor is Full of Sharks" is available for purchase by cl
 
 <!--
 
-
-<div class="content" id="about" style="">
-<p>Hi, I'm Tom Erik Rossavik, although people usually just call me Tom Erik Olsen Raften Rossavik, for short. I'm often considered an influencers' influencer.</p>
-
-<p>I'm sure it's hard to believe, I'm not a comedian.</p>
-<p>I make stuff though. Like this book, these games, the videos or these instructables.</p>
-<p>If you want to get a hold of me to say something nice, call 911 on the phone below.
-If you want to get a hold of me to offer me a job, call 611 on the phone below, when I answer, whisper your financial benefits and hang up before the beep.
-</p>
-
-</div>
-
 -->
 
 <!--
@@ -209,12 +200,11 @@ If you want to get a hold of me to offer me a job, call 611 on the phone below, 
             
             <iframe id="phoneBFTF" class="vintagePhone" src="assets/BFTF-Phone/index.html" scrolling="no" allowfullscreen></iframe>
 <!------------------------------------------------------------------------------------------------------------------->
-            <iframe id="phoneBFTFphone" class="vintagePhone" onclick="openPhoneiFrame();"src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
+            <div id="phoneOverlay" class="vintagePhone" onclick="openPhoneiFrame();"></div>
+
 
 <script>
-    function openPhoneiFrame() {
-  document.getElementById('phoneBFTFphone').className += ' largePhone';
-}
+   
 </script>
 
 
@@ -245,7 +235,14 @@ https://9elements.github.io/fancy-border-radius/ blob
 https://tools.pingdom.com/
 -->
 
-  
+<!--COPY
+
+    Hi, I'm Tom Erik Rossavik, although people usually just call me Tom Erik Olsen Raften Rossavik, for short. I'm often considered an influencers' influencer. I'm sure it's hard to believe, I'm not a comedian.
+<p>I make stuff though. Like this book, these games, the videos or these instructables.</p>
+<p>If you want to get a hold of me to say something nice, call 911 on the phone below.
+If you want to get a hold of me to offer me a job, call 611 on the phone below, when I answer, whisper your financial benefits and hang up before the beep.
+
+-->
         
 
        
