@@ -156,7 +156,9 @@ h6, p {
   overflow: hidden;
      
   font-family: 'Source Code Pro', monospace;  
-  font-size: 1.5vw;
+    font-family: 'Press Start 2P', cursive;
+  font-size: 1vw;
+  padding-left: 4vw;
   color: rgba(10,255,20,.70);
   font-weight: normal;
 }
@@ -396,28 +398,7 @@ a:hover {
 
 
 
-.word {
-  display:  block;
-  float:  left;
-  margin: auto;
-  color: chartreuse;
-  font-family: 'Press Start 2P', cursive;
-    font-size:  2vh;
-line-height: 2.2;
-  text-align: left;
 
-  
-}
-.wordwithoutaction {
-  display:  inline;
-  float:  left;
-  margin: auto;
-  color: chartreuse;
-  font-family: 'Press Start 2P', cursive;
-  font-size:  2vh;
-  text-align: left;
-  line-height: 2.2;
-}
 
 
 /*--------------------------*/
@@ -549,6 +530,7 @@ line-height: 2.2;
   width: 100vw; height: 100vh; 
   position: fixed; left: 0px; top: 0px; 
   backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px); 
   z-index: 80;}
 
 
@@ -560,7 +542,7 @@ line-height: 2.2;
   padding: 5px;
   margin-left: 15%;
       margin-right: 15%;
-      margin-top: 10%;
+      margin-top: 5%;
 
 }
 
@@ -579,7 +561,7 @@ line-height: 2.2;
 
 
 
-#sharkIframe { 
+.popUpFrames { 
             overflow: hidden;
             border:0px solid hotpink; 
             background-color: rgba(255,255,255,1.0); 

@@ -3,7 +3,13 @@
 body {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(255, 0, 0, 0.1));
   overflow: hidden;
+  display: block;
 }
+
+
+h1 {font-size: 6vw; text-align: center; color: darkblue; position: absolute: top: 1vw;}
+ h3 {font-size: 2.5vw; text-align: center; position: relative; color: darkblue}
+
 
 .book {
   width: 80vw;
@@ -124,6 +130,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#page42 {
+  background-image:url('spreads/coverB.jpg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #page2 {background-image:url('spreads/s00a.jpg');}
 #page3 {background-image:url('spreads/s00b.jpg');
 border-right: black solid 3px;}
@@ -148,4 +161,25 @@ border-right: black solid 3px;}
 #page22 {background-image:url('spreads/s10a.jpg');}
 #page23 {background-image:url('spreads/s10b.jpg');}
 
+#page24 {background-image:url('spreads/s11a.jpg');}
+#page25 {background-image:url('spreads/s11b.jpg');}
+#page26 {background-image:url('spreads/s12a.jpg');}
+#page27 {background-image:url('spreads/s12b.jpg');}
+
+#page28 {background-image:url('spreads/s13a.jpg');}
+#page29 {background-image:url('spreads/s13b.jpg');}
+#page30 {background-image:url('spreads/s14a.jpg');}
+#page31 {background-image:url('spreads/s14b.jpg');}
+#page32 {background-image:url('spreads/s15a.jpg');}
+#page33 {background-image:url('spreads/s15b.jpg');}
+
+#page34 {background-image:url('spreads/s16a.jpg');}
+#page35 {background-image:url('spreads/s16b.jpg');}
+#page36 {background-image:url('spreads/s17a.jpg');}
+#page37 {background-image:url('spreads/s17b.jpg');}
+#page38 {background-image:url('spreads/s18a.jpg');}
+#page39 {background-image:url('spreads/s18b.jpg');}
+
+#page40 {background-image:url('spreads/s19a.jpg');}
+#page41 {background-image:url('spreads/s19b.jpg');}
 

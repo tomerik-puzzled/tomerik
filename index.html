@@ -36,8 +36,8 @@
   <div class="steam" id="steam-four"></div>  
 </div>
 
-<img src="assets/images/virtualGlasses.png" style="width: 30vw;
-  height: calc(width * 100); position: absolute; top: 138vw; left: 56vw; z-index: -2;">
+<img src="assets/images/virtualGlasses.png" onclick="openVirtualGame()"style="width: 30vw;
+  height: calc(width * 100); position: absolute; top: 138vw; left: 56vw; z-index:0; cursor: crosshair;">
 
 <video id="virtualTest" class="insideVirtualframe" style="" autoplay="" loop muted="" webkit-playsinline playsinline>
 <source src="assets/videos/square1.mp4" type="video/mp4">
@@ -76,11 +76,11 @@
   height: calc(width * 100); position: absolute; z-index: 65; cursor: crosshair; width: 35vw; height: auto; 
   top: 108vw; left: 9vw; z-index: 5; ">
 
-
+<!--
 <h3 class="hideMe" style="font-size: 80px; text-align: center; z-index: 100;">VERTICAL</h3>
 
 <h2 class="hideMe" style="font-size: 80px; text-align: center; z-index: -4;">HORIZONTAL</h2>
-
+-->
 
 
 <button class="buttonOne" onclick="activateOne();"></button> 
@@ -126,19 +126,35 @@
 
 
 
+
+<!----- BOOK POP UP --->
 <div hidden id="modalTotal" class="surroundings" style="">
     <div class="module-border-wrap"><div class="module">
-        <iframe id="sharkIframe" src="assets/flipSharks/index.html" style="" scrolling="no" allowfullscreen></iframe>
+        <iframe id="sharkIframe" class="popUpFrames"src="assets/flipSharks/index.html" style="" scrolling="no" allowfullscreen></iframe>
         <span class="close" onclick="closeModal()">&times;</span>
-
-        
 
 </div>
 </div>
 </div>
 
     
-   
+
+<!-----VIRTUAL GAME POP UP --->
+<div hidden id="modalVirtualGame" class="surroundings" style="">
+    <div class="module-border-wrap"><div class="module">
+        
+
+        <div class="popUpFrames"><h1 style="color: black;">THE PROFESSOR OF THE OCCULT</h1></div>
+
+        <!--
+        <div data-aspect-width="16" data-aspect-height="9" class="snap-embed"><span>TheStudy-1-Closed-B</span><a href="https://seekbeak.com/v/0Vq2aVDOjXY" target="_blank">Snap Content</a></div><script async src="https://seekbeak.com/js/sbembed.js" charset="utf-8"></script>
+        -->
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+</div>
+</div>
+</div>
 
 
 
@@ -233,6 +249,9 @@ References
 https://codepen.io/vcmg/pen/LVRBdP    coffee steam
 https://9elements.github.io/fancy-border-radius/ blob
 https://tools.pingdom.com/
+
+https://www.bigcommerce.com/blog/shopify-alternatives/#4-reasons-why-youre-probably-looking-for-a-shopify-alternative
+
 -->
 
 <!--COPY

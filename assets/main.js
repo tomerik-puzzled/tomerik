@@ -21,6 +21,10 @@ function openBook() {
 
 }
 
+function openVirtualGame() {
+    document.getElementById('modalVirtualGame').style.display ='block';
+}
+
 
 function activateOne() { 
   document.getElementById('optionOne').style.display ='block';
@@ -105,6 +109,7 @@ function playVideo() {
 
 function closeModal() {
     document.getElementById('modalTotal').style.display ='none';
+    document.getElementById('modalVirtualGame').style.display ='none';
 }
 
 
