@@ -439,7 +439,7 @@ line-height: 2.2;
             overflow-y: none;
             overflow-x: none;
             cursor: pointer;
-            z-index: 90;
+            z-index: 10;
           }
 
 .largePhone { 
