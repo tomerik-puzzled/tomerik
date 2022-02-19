@@ -60,7 +60,8 @@ color: white;
         z-index: 100;
         position: relative;
       margin-right: 5vw;
-
+      bsolute;
+      top: 30vw;
         
         transition: 0.5s;
       }
@@ -86,9 +87,9 @@ animation: background 20s linear infinite;
 }
 
 .blabla{ position: absolute;
-  top: 40%;
-  left: 25%;
-  animation: blabla 10s;
+  top: 7%;
+  left: 15%;
+  animation: blabla 1s;
 }
 
 @keyframes background {
@@ -97,8 +98,8 @@ animation: background 20s linear infinite;
 }
 
 @keyframes blabla {
-  0%{ackground-position:0% 50%; top: 60%;}
-  100%{background-position:100% 50%; top: 20%}
+  0%{background-position:0% 50%; top: 80%;}
+  100%{background-position:100% 50%; top: 7%}
 }
 
 
@@ -155,49 +156,97 @@ span:nth-child(2) {
 .flicker {
   width: 2vw;
   height: 8vw;
+  background: conic-gradient(yellow 15deg, yellow 30deg, red 45deg, black 60deg, blue 270deg, red 310deg, yellow 340deg);
   background: linear-gradient(to left, rgba(255, 80, 255, 0.9), rgba(255, 20, 255, 0.9));
-  
+  background: linear-gradient(to top, red 0%, orange 10%, yellow 25%, white 75%, black 100%);
+    background-color: red; /* For browsers that do not support gradients */
+  background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%);
+   
+
   border-radius: 66% 23% 25% 30% / 82% 84% 8% 8%  ;
   animation-name: flickeringLights;
-  animation-duration: 2s;
-  animation-iteration-count: 3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
   position: fixed;
   bottom: 6.2vw;
   left: 31vw;
-  opacity: 0.9;
+  opacity: 0.8;
   
  
 }
 
 @keyframes flickeringLights {
-  0% {    background: linear-gradient(to left, rgba(255, 80, 255, 0.9), rgba(255, 20, 255, 0.9)); 
-  background: white;  
+  0% {    background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%); 
           border-radius: 66% 23% 25% 30% / 82% 84% 10% 14% 
-
         }
 
-  25% {    background: linear-gradient(to left, rgba(255, 80, 200, 0.8), rgba(255, 20, 255, 0.9));   
-          background: whitesmoke;
+  25% {   
           border-radius: 65% 35% 20% 25% / 82% 84% 8% 8%  ;
-
       }
 
-  40% {    background: linear-gradient(to left, rgba(255, 80, 200, 0.8), rgba(255, 20, 255, 0.9));   
-          background: ghostwhite;
-          border-radius: 60% 40% 25% 30% / 82% 84% 12% 12%  ;}
+  40% {    background: linear-gradient(to top, black -1%, red 4%, orange 7%, white 14%, yellow 21%, white 99%); 
+          border-radius: 50% 50% 25% 30% / 82% 84% 12% 12%  ;}
 
-60% {    background: linear-gradient(to left, rgba(255, 80, 200, 0.8), rgba(255, 20, 255, 0.9));   
-          background: white;
+60% {    
           border-radius: 57% 44% 40% 20% / 82% 84% 10% 10%  ;}
 
-75% {    background: linear-gradient(to left, rgba(255, 80, 200, 0.8), rgba(255, 20, 255, 0.9));   
-          background: ghostwhite;
+75% {    background: linear-gradient(to top, black -3%, red 3%, orange 5%, white 13%, yellow 20%, white 98%);  
+          
           border-radius: 62% 42% 25% 30% / 82% 84% 8% 8%  ;}
 
   
-  100% {  background: linear-gradient(to left, rgba(255, 80, 255, 0.9), rgba(255, 20, 255, 0.9));
-  background: white;
+  100% { background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%); 
           border-radius: 66% 23% 25% 30% / 82% 84% 8% 8%;}}
+
+
+.flickerAggressive {
+  width: 2vw;
+  height: 8vw;
+  background: conic-gradient(yellow 15deg, yellow 30deg, red 45deg, black 60deg, blue 270deg, red 310deg, yellow 340deg);
+  background: linear-gradient(to left, rgba(255, 80, 255, 0.9), rgba(255, 20, 255, 0.9));
+  background: linear-gradient(to top, red 0%, orange 10%, yellow 25%, white 75%, black 100%);
+    background-color: red; /* For browsers that do not support gradients */
+  background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%);
+   
+
+  border-radius: 23% 63% 25% 30% / 82% 84% 10% 14%;
+  animation-name: flickeringLightsAggressive;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  position: fixed;
+  bottom: 6.2vw;
+  left: 31vw;
+  opacity: 0.8;
+  
+ 
+}
+
+
+
+@keyframes flickeringLightsAggressive {
+  0% {    background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%); 
+          border-radius: 23% 63% 25% 30% / 82% 84% 10% 14% 
+        }
+
+  25% {   
+          border-radius: 35% 65% 20% 25% / 82% 84% 8% 8%  ;
+      }
+
+  40% {    background: linear-gradient(to top, black -1%, red 4%, orange 7%, white 14%, yellow 21%, white 99%); 
+          border-radius: 50% 50% 25% 30% / 82% 84% 12% 12%  ;}
+
+60% {    
+          border-radius: 44% 54% 40% 20% / 82% 84% 10% 10%  ;}
+
+75% {    background: linear-gradient(to top, black -3%, red 3%, orange 5%, white 13%, yellow 20%, white 98%);  
+          
+          border-radius: 42% 62% 25% 30% / 82% 84% 8% 8%  ;}
+
+  
+  100% { background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%); 
+          border-radius: 23% 63% 25% 30% / 82% 84% 8% 8%;}}
+
+
 
 
 .flickerBall {
@@ -241,7 +290,6 @@ span:nth-child(2) {
 75% {    background: linear-gradient(to left, rgba(255, 80, 200, 0.8), rgba(255, 20, 255, 0.9));   
           background: orangered;
           border-radius: 41% 43% 48% 41% / 43% 51% 47% 48%;}
-
   
   100% {  background: linear-gradient(to left, rgba(255, 80, 255, 0.9), rgba(255, 20, 255, 0.9));
   background: red;
@@ -259,7 +307,7 @@ span:nth-child(2) {
 #candle4{   bottom: 6.2vw;  left: 31vw;}
 #ball4  {   bottom: 7vw; left: 29.5vw;}
 
-#candle5{   bottom: 6.2vw;  left: 41vw;}
-#ball5  {   bottom: 7vw; left: 39.5vw;}
+#candle5{   bottom: 8vw;  left: 41vw;}
+#ball5  {   bottom: 8vw; left: 39.5vw; width: 3vw}
 
 
