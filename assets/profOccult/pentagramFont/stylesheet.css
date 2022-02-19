@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'pentagrams_callygraphyregular';
+    src: url('pentagram-webfont.woff2') format('woff2'),
+         url('pentagram-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
