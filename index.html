@@ -36,10 +36,16 @@
   <div class="steam" id="steam-four"></div>  
 </div>
 
+
+
+
+
+
+
 <img src="assets/images/virtualGlasses.png" onclick="openVirtualGame()"style="width: 30vw;
   height: calc(width * 100); position: absolute; top: 138vw; left: 56vw; z-index:0; cursor: crosshair;">
 
-<video id="virtualTest" class="insideVirtualframe" style="" autoplay="" loop muted="" webkit-playsinline playsinline>
+<video id="virtualTest" class="insideVirtualframeLeft" style="" autoplay="" loop muted="" webkit-playsinline playsinline>
 <source src="assets/videos/square1.mp4" type="video/mp4">
 </video> 
 
@@ -59,8 +65,8 @@
 <img src="assets/images/shelfFullSize.png" style="width: 100vw; height: calc(width * 1.2);
   height: calc(width * 100); position: absolute; top: -0.5vw; left: 0vw; z-index: -1;">
 
-<img src="assets/images/camera.png" style="width: 30vw;
-  height: calc(width * 100); position: absolute; top: -1vw; left: 56vw; z-index: -2;">
+<img src="assets/images/camera.png" style="width: 30vw; max-width: 400px;
+  height: calc(width * 100); max-height: 300px; position: absolute; top: -1vw; left: 56vw; z-index: -2;">
 
 <img src="assets/images/greenPlant.png" style="width: 30vw;
   height: calc(width * 100); position: absolute; top: 0vw; left: 0vw; z-index: 6;">
@@ -112,20 +118,40 @@
 </video> 
 
 
-<video hidden id="optionTwo" class="insideTVframe">
+<video hidden id="optionTwo" class="insideTVframe" preload="none">
 <source src="assets/videos/middleProfessor.mp4" type="video/mp4">
 </video> 
 
-<video hidden id="optionThree" class="insideTVframe" poster="https://assets.codepen.io/6093409/river.jpg">
+<video hidden id="optionThree" class="insideTVframe" poster="https://assets.codepen.io/6093409/river.jpg" preload="none">
   <source src="assets/videos/TheBoxFromTheFutureVideoPromo.mp4" type="video/mp4">
 </video>
 
-<video hidden id="optionFour" class="insideTVframe" webkit-playsinline playsinline>
+<video hidden id="optionFour" class="insideTVframe" webkit-playsinline playsinline preload="none">
 <source src="assets/videos/vid-182.mp4" type="video/mp4">
 </video> 
 
 
-
+<!--  #tv {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      margin: 20px 0;
+      background: red;
+      border-radius: 50% / 10%;
+      color: white;
+      text-align: center;
+      text-indent: .1em;
+    }
+    #tv:before {
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      right: -5%;
+      left: -5%;
+      background: inherit;
+      border-radius: 5% / 50%;
+    }-->
 
 <!----- BOOK POP UP --->
 <div hidden id="modalTotal" class="surroundings" style="">
@@ -155,6 +181,57 @@
 </div>
 </div>
 </div>
+
+
+
+
+<!-----HOLOGRAM --->
+
+<img src="assets/images/vintageCamera.png" onclick=""style="width: 18vw;
+  height: calc(width * 100); position: absolute; top: 168vw; left: 62vw; z-index:0; cursor: crosshair;">
+
+<video id="hologramVideo" class="hologramProjectionVideo" style="border-radius: 100px / 50px;" autoplay="" loop muted="" webkit-playsinline playsinline>
+<source src="assets/videos/TheBoxFromTheFutureVideoPromo.mp4" type="video/mp4">
+</video> 
+
+<div class="projectionLight clip" style=""></div>
+    
+
+<style type="text/css">
+  
+
+
+
+  .cone {
+      width: 0;
+      height: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 100px solid red;
+      border-radius: 50%;
+     
+    }
+
+   .oval {
+
+      width: 200px;
+      height: 100px;
+      background: red;
+      border-radius: 100px / 50px;
+      
+    }
+
+
+
+    .placement{
+      top: 170vw;
+      left: 30vw;
+    }
+
+</style>
+
+<!-----HOLOGRAM ENDS --->
+
 
 
 
@@ -249,7 +326,7 @@ References
 https://codepen.io/vcmg/pen/LVRBdP    coffee steam
 https://9elements.github.io/fancy-border-radius/ blob
 https://tools.pingdom.com/
-
+https://bennettfeely.com/clippy/        - polygon clip
 https://www.bigcommerce.com/blog/shopify-alternatives/#4-reasons-why-youre-probably-looking-for-a-shopify-alternative
 
 -->

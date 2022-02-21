@@ -94,8 +94,57 @@ p
 }
 
 
+/*   HOLOGRAM PROJECTIONS   */
+/*   ---------------------  */
+.hologramProjectionVideo {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.0);
+  top: 170.5vw;
+  left: 15.2vw;
+clip-path: polygon(0% 99%, 6% 68%, 7% 38%, 0% 0%, 100% 34%, 94% 52%, 93% 68%, 100% 84%);
+overflow: hidden;
+-webkit-transform: translateZ(0);
+box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
+width: 32vw;
+height: 24vw;
+opacity: 0.4;
+}
 
-.insideVirtualframe {
+.clip {clip-path: polygon(0% 99%, 6% 68%, 7% 38%, 0% 0%, 100% 34%, 94% 52%, 93% 68%, 100% 84%);}
+
+.projectionLight {
+  height: 15vw;
+  width: 40vw;
+  background: linear-gradient(to left, blue -2%, red 2%, orange 6%, white 15%, yellow 20%, black 100%);
+  border-radius: 10% 81% 80% 10% / 5% 39% 31% 10%;
+  animation-name: projecting;
+  animation-duration: 0.04s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 170vw;
+  left: 30vw;
+  opacity: 0.3;
+}
+
+@keyframes projecting {
+  0% {    background: linear-gradient(to left, blue -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%);}
+
+  25% {   background: linear-gradient(to left, black -2%, orange 2%, pink 9%, black 19%, blue 70%, black 100%);}
+
+  75% {   background: linear-gradient(to left, darkblue -4%, red 8%, pink 18%, black 35%, blue 80%, blue 100%);}
+
+  100% {  background: linear-gradient(to left, blue -2%, red 2%, orange 6%, white 15%, yellow 20%, black 100%);}
+  }
+
+/*   HOLOGRAM PROJECTIONS END   */
+
+
+
+
+
+
+
+.insideVirtualframeLeft {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.0);
   top: 140.5vw;
@@ -107,7 +156,6 @@ box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
 width: 5vw;
 height: 5vw;
 opacity: 0.4;
-
 }
 
 .insideVirtualframeRight {

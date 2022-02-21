@@ -89,7 +89,7 @@ animation: background 20s linear infinite;
 .blabla{ position: absolute;
   top: 7%;
   left: 15%;
-  animation: blabla 1s;
+  animation: blabla 10s;
 }
 
 @keyframes background {
@@ -159,10 +159,8 @@ span:nth-child(2) {
   background: conic-gradient(yellow 15deg, yellow 30deg, red 45deg, black 60deg, blue 270deg, red 310deg, yellow 340deg);
   background: linear-gradient(to left, rgba(255, 80, 255, 0.9), rgba(255, 20, 255, 0.9));
   background: linear-gradient(to top, red 0%, orange 10%, yellow 25%, white 75%, black 100%);
-    background-color: red; /* For browsers that do not support gradients */
+  background-color: red; /* For browsers that do not support gradients */
   background: linear-gradient(to top, black -2%, red 2%, orange 6%, white 15%, yellow 20%, white 100%);
-   
-
   border-radius: 66% 23% 25% 30% / 82% 84% 8% 8%  ;
   animation-name: flickeringLights;
   animation-duration: 8s;
