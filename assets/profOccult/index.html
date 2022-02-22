@@ -5,31 +5,71 @@
   <title>Professor of the Occult</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./pentagramFont/stylesheet.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
-<style type="text/css">
-  
 
-</style>
 
 
 <body>
+  
+<div class="moon"></div>
+
+<!--
+<h6 class="hideMe" style="color: white">Vertical</h6>
+<h5 class="hideMe" style="color: white">Horizontal</h5>
+-->
+<div class="header">
+
+<h3>A VIRTUAL ESCAPE GAME EXPERIENCE</h3>
+
+<h1 style="display: block;" class="blabla"><span>The Professor Of</span><span>The Occult</span></h1>
+
+</div>
+
+
+<div class="center">
+
+
+<div class="virtualGlasses">
+  <!--
+  <img src="images/room2.png" class="insideGlasses" style=""/>
+  -->
+
+
+
+</div>
 
 
 
 
 
-<h1 class="blabla"><span>The Professor Of</span><span> The Occult</span></h1>
-<h3 style="color: white">A Virtual Escape Game Experience</h3>
 
 
-<button class="button">Buy an Access Code</button>
-<button class="button">Learn More</button>
-<button class="button">Play a Demo</button>
 
-<div class="footer2">
+<div id="learnMoreSpiel" style="display: none" class="infoExpansion">
+  <p class="spiel">Play our classic live-action escape game The Professor of the Occult via your computer in a virtual environment.<br> 
+
+  When you buy a session, you will receive an access code. Once you are ready to play, enter the code on the dedicated website. After activating, you have access for 48 hours. In order to play with your friends, set up a Zoom chat and give them the code and website link provided in the booking confirmation email.<br><br>Note: Game can only be played on a computer with a Chrome browser.</p>
+</div>
+
+<div hidden id="demoPlay" class="infoExpansion">
+  <p class="spiel">Play our classic live-action escape game The Professor of the Occult via your computer in a virtual environment. When you buy a session, you will receive an access code. Once you are ready to play, enter the code on the dedicated website. Once activated, you have access for 48 hours.In order to play with your friends, set up a Zoom chat and give them the code and website link provided in the booking confirmation email.Note: Game can only be played on a computer with a Chrome browser. </p>
+</div>
+
+<div hidden id="accessCode" class="infoExpansion">
+  <p class="spiel">Play our classic live-action escape game The Professor of the Occult via your computer in a virtual environment. When you buy a session, you will receive an access code. Once you are ready to play, enter the code on the dedicated website. Once activated, you have access for 48 hours.In order to play with your friends, set up a Zoom chat and give them the code and website link provided in the booking confirmation email.Note: Game can only be played on a computer with a Chrome browser. </p>
+</div>
+
+
+
+</div> <!-- Center ends -->
+
+
+
+
+<div class="footer">
 
 <div id="candle1" class="flickerAggressive"></div>
 <div id="ball1" class="flickerBall"></div>
@@ -46,8 +86,41 @@
 <div id="candle5" class="flicker"></div>
 <div id="ball5" class="flickerBall"></div>
 
+<div id="candle6" class="flickerAggressive"></div>
+<div id="ball6" class="flickerBall"></div>
+
+<div id="candle7" class="flicker"></div>
+<div id="ball7" class="flickerBall"></div>
+
+<div id="candle8" class="flicker"></div>
+<div id="ball8" class="flickerBall"></div>
+
+<div id="candle9" class="flickerAggressive"></div>
+<div id="ball9" class="flickerBall"></div>
+
+<div id="candle10" class="flicker"></div>
+<div id="ball10" class="flickerBall"></div>
+
+<button class="button">Buy Access</button>
+<button class="button" onclick="openLearnMore()">Learn More</button>
+<button class="button">Play a Demo</button>
+
 
 </div>
+
+
+<script type="text/javascript">
+
+function openLearnMore() {
+  document.getElementById('accessCode').style.display = 'none';
+  document.getElementById('demoPlay').style.display = 'none';
+  document.getElementById('learnMoreSpiel').style.display = 'block';
+}
+
+
+</script>
+
+
 </body>
 
 

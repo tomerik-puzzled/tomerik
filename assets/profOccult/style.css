@@ -2,94 +2,192 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 
-
-
-
+/*
+html{background-color: pink; margin: auto; justify-content: center; align-items: center; align-items: center; padding-top: 0px}
+*/
 
 body {
  /* background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(255, 0, 0, 0.3));*/
   background: rgba(0, 0, 0, 1.0);
   overflow: hidden;
+
+  color: white;
+  font-family: Lobster;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: center;
+  text-align: center;
+justify-content: center; 
+  align-content: center; vertical-align: center; text-align: center; text-align;
+  margin: auto auto;
+  margin-top: 0px;
+  padding: auto;
+  border: 0px dotted blue;
+}
+
+  /*  HORIZONTAL  */
+@media only screen and (orientation: landscape) {
+  body {
+    display: block;
+  }
+  h3 {font-size: 2vw;}
+
+  h6 {display: none;}
+  h5 {display: block;}
+  h1 {font-size: 8vw;}
+  button {bottom: -35vh;
+  }
+  .moon {top: -10vh; right: -10vh; }
+
+
+  }
+
+
+        /*  vertical  */
+@media only screen and (orientation: portrait) {
+  body {  }
+h3 {font-size: 1.5vh;}
+  h6 {display: block;}
+  h5 {display: none;}
+  h1 {font-size: 5vh;}
+  button {}
+    .moon {top: -6vw; right: -6vw; }
+}
+
+
+.header {
+  position: fixed;
+  left: 0%;
+  top: 0vh;
+  height: 25vh;
+  width: 100vw;
+  border: 0px dotted red;
+  padding: 0;
+  margin: 0 auto;
+
+
+
+}
+
+
+.center {
+  position: relative;
+  left: 0%;
+  top: 20vh;
+  min-height: 50vh;
+  width: 100vw;
+
   display: block;
-color: red;
-font-family: Lobster;
-font-family: 'Open Sans', sans-serif;
-justify-content: center;
-text-align: center;
+
+  
+  margin: 0;
+  
+  padding: auto;
+  border: 0px green dotted;
+  overflow: scroll;
+
+
 }
 
 
+.footer {
+  position: absolute;
+  left: 0%;
+  bottom: 0vh;
+  background-color: rgba(255, 0, 0, 0.0);
+  color: white;
+  background-image: url(images/redCandles.png);
+  background-position: center;
+  background-position: contain;
+  background-repeat: no-repeat;
+    background-size: 100vw 25vw;
+  text-align: center;
+  border: 0px double blue;
+  height: 25vw;
+  width: 100vw;
+}
 
+.moon {
+width: 15vw; 
+height: 15vw; 
+position: fixed; 
 
-
-h1, h2 {
-    font-family: pentagrams_callygraphyregular;
+background-color: red; z-index: 100;
+background-image: url(images/blueMoon.jpg);
+background-size: cover;
+border: 0px solid black;
+animation: moonShine 8s infinite;
+/*mix-blend-mode: screen;  
+normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, difference, exclusion, hue, saturation, color, luminosity */
+filter: hue-rotate(140deg);
    
-
+ 
 }
 
-
-/*
-.profHeading {
-color: white;
-  background-image: -webkit-linear-gradient(92deg, blue, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 10s infinite linear;
+@keyframes moonShine {
+  0% {filter: hue-rotate(140deg); }
+  50% {filter: hue-rotate(100deg); }
+  100% {filter: hue-rotate(140deg); }
 }
-
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
-*/
 
 .button {border: 0.2vw solid white; background: rgba(255,0,0,0.3); color: white; 
  font-family: 'Open Sans', sans-serif;
-        display: inline;
+        display: inline-block;
         margin: 0 auto;
         font-weight: 1.8vw;
         
         text-align: center;
-        font-size: 2vw;
+        font-size: 2.5vh;
         
         z-index: 100;
         position: relative;
-      margin-right: 5vw;
-      bsolute;
-      top: 30vw;
-        
+       
+
+      margin-right: 3vh;
+      margin-left: 3vh;
+     margin-bottom: 2vh;
         transition: 0.5s;
+        z-index: 100;
+
       }
 
-.button:hover {background: rgba(164,0,0,0.1);}
+.button:hover {background: rgba(164,145,0,0.5);}
+
+/*INFO EXPANSION*/
+
+.infoExpansion {
+  max-width: 80%;
+  background: rgba(0, 0, 0, 0.9);
+  border: solid 0.2vw white;
+  position: relative;
+  margin-left: 10%;
+ 
+  overflow: scroll;
+}
+
+p {color: white;}
+
+
+
+
 
 
 h1 {
   font-family: pentagrams_callygraphyregular;
-   
-  display: inline-block;
-  margin: 0 auto;
-  text-align: center;
-
-  font-size: 6vw; text-align: center; position: relative; top: 1vw;
-animation: background 20s linear infinite;
-  
+  text-align: center; position: relative; top: 0vw;
+  animation: background 20s linear infinite;
   background: linear-gradient(90deg, rgba(250,48,30,1) 0%,rgba(255,201,88,1) 10%,rgba(255,147,46,1) 20%,rgba(255,165,168,1) 30%,rgba(255,90,165,1) 40%,rgba(255,16,67,1) 50%,rgba(255,58,63,1) 60%,rgba(255,175,183,1) 70%,rgba(255,170,76,1) 80%,rgba(250,48,30,1) 90%,rgba(255,201,88,1) 100%);
   background-size: 1000% 100%;
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 0px;
+  border: double pink 0px;
+  padding: 0;
 }
 
-.blabla{ position: absolute;
-  top: 7%;
-  left: 15%;
-  animation: blabla 10s;
+.blabla{ position: relative;
+ 
+  
+  animation: blabla 8s;
 }
 
 @keyframes background {
@@ -98,18 +196,20 @@ animation: background 20s linear infinite;
 }
 
 @keyframes blabla {
-  0%{background-position:0% 50%; top: 80%;}
-  100%{background-position:100% 50%; top: 7%}
+  0%{background-position:0% 50%; top: 180%;}
+  100%{background-position:100% 50%; top: 0%}
 }
 
 
 
 span {
   display: block;
-  margin: 4vw;
+  margin-top: 0;
+  animation: blabla 8s;
+
 }
 span:nth-child(1) {
-  
+  margin-bottom: 4vh;
   text-indent: -0.33em;
 }
 span:nth-child(2) {
@@ -119,38 +219,57 @@ span:nth-child(2) {
   text-indent: -0.07em;
 }
 
- h3 {font-size: 2.5vw; text-align: center; position: relative;}
+ h3 {text-align: center; position: relative; border: 0px solid yellow; margin-top: 0px; margin-bottom: 0}
 
-.footer1 {
-  position: fixed;
+
+
+
+
+
+
+
+
+/*VIRTUAL GLASSES*/
+.virtualGlasses
+{
+  display: none; 
+  background-image: url(images/glassesFromBehind.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 233px; width: 100vw; 
+ 
+ border: 0px solid yellow;
+   position: relative;
   left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
-  background-color: rgba(0, 0, 0, 0.0);
-  color: white;
-  background-image: url(images/twoCandles.png);
-  background-size: 1200px 300px;
-  background-repeat: no-repeat;
-  text-align: center;
-  border: 4px solid white;
+   margin: 0;
+
+  
+   
+  
+   
 }
 
-.footer2 {
-  position: fixed;
+.insideGlasses{
+
+  position: relative;
   left: 0%;
-  bottom: 0;
-  width: 100vw;
-  height: 25vw;
-  background-color: rgba(0, 0, 0, 0.0);
-  color: white;
-  background-image: url(images/redCandles.png);
-  background-position: cover;
-  background-repeat: no-repeat;
-    background-size: 100vw 25vw;
-  text-align: center;
-  border: 0px solid white;
-}
+  top: 0%;
+  width: 577px;
+  height: 233px;
+clip-path: polygon(12% 8%, 17% 4%, 25% 2%, 30% 2%, 34% 3%, 38% 4%, 41% 6%, 44% 10%, 44% 20%, 43% 35%, 41% 43%, 36% 45%, 27% 47%, 21% 46%, 14% 44%, 11% 33%, 10% 19%);
+
+
+  }
+
+
+
+/*VIRTUAL GLASSES ENDS*/
+
+
+
+
+
 
 
 .flicker {
@@ -166,7 +285,7 @@ span:nth-child(2) {
   animation-duration: 8s;
   animation-iteration-count: infinite;
   position: fixed;
-  bottom: 6.2vw;
+  bottom: 4.2vw;
   left: 31vw;
   opacity: 0.8;
   
@@ -293,19 +412,73 @@ span:nth-child(2) {
   background: red;
           border-radius: 41% 40% 46% 41% / 43% 43% 47% 48%;}}
 
-#candle1{   bottom: 8vw;  left: 6vw;}
-#ball1  {   bottom: 9vw; left: 5vw;}
+#candle1{   bottom: 8.7vw;  left: 6vw;}
+#ball1  {   bottom: 7vw; left: 4.5vw; animation-duration: 5s;}
 
-#candle2{   bottom: 6.2vw;  left: 13vw;}
-#ball2  {   bottom: 7vw; left: 13.5vw;}
+#candle2{   bottom: 7.2vw;  left: 12.5vw; height: 8vw;}
+#ball2  {   bottom: 5vw; left: 11.5vw; }
 
-#candle3{   bottom: 6.2vw;  left: 21vw;}
-#ball3  {   bottom: 7vw; left: 21.5vw;}
+#candle3{   bottom: 9.3vw;  left: 23.5vw;}
+#ball3  {   bottom: 7vw; left: 21.5vw; animation-duration: 3s;}
 
-#candle4{   bottom: 6.2vw;  left: 31vw;}
-#ball4  {   bottom: 7vw; left: 29.5vw;}
+
+
+#candle4{   bottom: 6.2vw;  left: 31vw; height: 10vw;}
+#ball4  {   bottom: 5vw; left: 29.5vw; animation-duration: 5s;}
 
 #candle5{   bottom: 8vw;  left: 41vw;}
-#ball5  {   bottom: 8vw; left: 39.5vw; width: 3vw}
+#ball5  {   bottom: 6vw; left: 40vw; width: 3vw; animation-duration: 6s;}
+
+#candle6{   bottom: 8.5vw;  left: 56.5vw;}
+#ball6  {   bottom: 7vw; left: 55vw;}
+
+
+
+#candle7{   bottom: 7.6vw;  left: 62.5vw; height: 9vw;}
+#ball7  {   bottom: 6vw; left: 61.5vw; animation-duration: 10s;}
+
+#candle8{   bottom: 9.2vw;  left: 74vw;}
+#ball8  {   bottom: 8vw; left: 72.5vw;}
+
+#candle9{   bottom: 6.2vw;  left: 81vw;}
+#ball9  {   bottom: 5vw; left: 79.5vw; animation-duration: 5s;}
+
+#candle10{   bottom: 8.3vw;  left: 91vw;}
+#ball10  {   bottom: 6vw; left: 90.5vw; width: 3vw}
+
+
+
+
+
+
+/*WHATEVER*/
+.hideMe {
+    -moz-animation: cssAnimation 0s ease-in 0.5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 0.5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 0.5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 2s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+
 
 

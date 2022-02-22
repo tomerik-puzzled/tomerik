@@ -107,7 +107,15 @@ overflow: hidden;
 box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
 width: 32vw;
 height: 24vw;
-opacity: 0.4;
+opacity: 1.0;
+mix-blend-mode: color-dodge; 
+filter: contrast(200%) brightness(100%);
+/*
+normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, difference, exclusion, hue, saturation, color, luminosity
+
+
+*/
+
 }
 
 .clip {clip-path: polygon(0% 99%, 6% 68%, 7% 38%, 0% 0%, 100% 34%, 94% 52%, 93% 68%, 100% 84%);}
@@ -135,6 +143,37 @@ opacity: 0.4;
 
   100% {  background: linear-gradient(to left, blue -2%, red 2%, orange 6%, white 15%, yellow 20%, black 100%);}
   }
+
+
+
+  .cone {
+      width: 0;
+      height: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 100px solid red;
+      border-radius: 50%;
+     
+    }
+
+   .oval {
+
+      width: 200px;
+      height: 100px;
+      background: red;
+      border-radius: 100px / 50px;
+      
+    }
+
+
+
+    .placement{
+      top: 170vw;
+      left: 30vw;
+    }
+
+
+
 
 /*   HOLOGRAM PROJECTIONS END   */
 
@@ -380,12 +419,13 @@ button:focus {outline:0;}
 }
 
 #steam-one {
-  background-color:  red;
+  background-color:  ghostwhite;
   -webkit-animation: steam-one 7s ease-out infinite;
   animation: steam-one 6s ease-out infinite;
 }
 
 #steam-three {
+  background-color:  lightslategrey;
   -webkit-animation: steam-one 4s ease-out 1s infinite;
   animation: steam-one 4s ease-out 1s infinite;
 }
@@ -401,6 +441,8 @@ button:focus {outline:0;}
 }
 
 #steam-two {
+    background-color:  mintcream;
+
   -webkit-animation: steam-two 4s ease-out 0.5s infinite;
   animation: steam-two 4s ease-out 0.5s infinite;
 }
