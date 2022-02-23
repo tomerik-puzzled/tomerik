@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var numberOfPages = $('.Wrapper').children().length;
+  var numberOfPages = 10;
   var hoverTarget; //stores currently hovered page, will only remove the hover effect if it hasn't been turned.
   var PagesMoving = false; //prevents the pages getting out of order with multiple page clicks running simultaneously
 
