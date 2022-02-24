@@ -83,7 +83,7 @@ h1 {font-size: 6vw; text-align: center; color: darkblue; position: relative: top
 
 #water {
   width: 100vw;
-  height: 15vh;
+  height: 10vh;
   position: fixed;
   bottom: 0;
   background-color: rgba(0,0,205,1.9);
