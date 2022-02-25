@@ -31,7 +31,7 @@ p
    /*  HORIZONTAL  */
 @media only screen and (orientation: landscape) {
   body {
-  background-image: url('images/backgroundHVextended.jpg'), url('');
+  background-image: url('images/theShef.jpg'), url('images/theShelf7575.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100vw calc(100vw * 2);
@@ -635,7 +635,7 @@ a:hover {
   max-width: 75vw;
   padding: 1rem;
   position: fixed;
-  background: linear-gradient(to right, red, purple, blue, white, grey, black, pink);
+  background: white;
   padding: 5px;
   margin-left: 15%;
       margin-right: 15%;
