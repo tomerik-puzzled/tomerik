@@ -2,13 +2,20 @@ html {
   
 }
 
-body {color: white;}
+body {color: white;
+justify-content: center;
+          text-align: center;
+          align-items: center;
+          align-content: center;
+          vertical-align: center;}
 
 
 * {
   box-sizing: border-box;
 }
 
+
+iframe {border-radius: 1%;}
 /*
 p 
 {
@@ -608,11 +615,12 @@ a:hover {
 /* The Close Button */
 .close {
   color: blue;
-  float: right;
-  font-size: 40px;
+  font-size: 6vh;
   font-weight: bold;
   z-index: 100;
-  position: relative;
+  position: absolute;
+  right: 3px;
+  top: -6px;
 }
 
 .close:hover,
@@ -628,30 +636,34 @@ a:hover {
   position: fixed; left: 0px; top: 0px; 
   backdrop-filter: blur(5px); 
   -webkit-backdrop-filter: blur(5px); 
-  z-index: 80;}
+  z-index: 80;
+}
 
-
+/* NOT IN USE */
 .module-border-wrap {
   max-width: 75vw;
   padding: 1rem;
   position: fixed;
-  background: white;
+  background: red;
   padding: 5px;
   margin-left: 15%;
       margin-right: 15%;
       margin-top: 5%;
-
 }
 
 .module {
   background: green;
   color: white;
-  padding: 2rem;
+  padding: 0em;
   position: relative;
-
+  left: 10%;
+  border-radius: 20px;
   min-width: 60vw;
-        max-width: 75vw;
-        min-height: 40vw;
+  border: 10px solid rgba(0, 0, 0, 0.9);
+    max-width: 75vw;
+    min-height: 40vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
 }
 
 

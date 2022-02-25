@@ -34,8 +34,7 @@ justify-content: center;
   h6 {display: none;}
   h5 {display: block;}
   h1 {font-size: 8vw;}
-  button {bottom: -35vh;
-  }
+  button {}
   .moon {top: -10vh; right: -10vh; }
 
 
@@ -74,16 +73,18 @@ h3 {font-size: 1.5vh;}
   left: 0%;
   top: 20vh;
   min-height: 50vh;
-  width: 100vw;
+  width: 80vw;
+
 
   display: block;
 
   
   margin: 0;
-  
+  margin-left: 50px;
   padding: auto;
   border: 0px green dotted;
-  overflow: scroll;
+ 
+
 
 
 }
@@ -140,7 +141,7 @@ filter: hue-rotate(140deg);
         
         z-index: 100;
         position: relative;
-       
+       bottom: -38vh;
 
       margin-right: 3vh;
       margin-left: 3vh;
@@ -161,7 +162,7 @@ filter: hue-rotate(140deg);
   position: relative;
   margin-left: 10%;
  
-  overflow: scroll;
+  
 }
 
 p {color: white;}
