@@ -91,24 +91,23 @@ color: blue; border: dashed blue 0px}
   /*SET THE SIZE OF THE PHONE*/
   background-size: contain;
   border: dashed red 0px;
-
 }
+
+/*BACKGROUND OF THE WHOLE KEYPAD*/
 #keypad .key {
-  background-color: rgba(255, 255, 240, 0.5);
+  background-color: rgba(255, 255, 240, 0.0);
   box-sizing: border-box;
   position: relative;
   perspective: 800px;
-
-
-  
+  padding: 0;
   border: dashed green 0px;
 }
 #keypad .key .inner {
-  width: 110%;
+  width: 100%;
   height: 100%;
   position: relative;
   border: solid green 0px;
-  background-color: rgba(255, 255, 0, 1.0);
+  background-color: rgba(255, 255, 0, 0.4);
 }
 
 
@@ -150,7 +149,7 @@ color: blue; border: dashed blue 0px}
 */
 
 #keypad .key.key-1 .inner {
-  background-position: -17px -28px;
+  background-position: -17px -128px;
    background-image: url('assets/buttons/one.png');
    
   background-position: center;

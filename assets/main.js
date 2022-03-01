@@ -1,5 +1,7 @@
 
-
+$(document).ready(function(){
+   $(".row").removeClass("offset");
+});
 
 var lfour = 0;
 var lthree = 0;
