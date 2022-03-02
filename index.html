@@ -52,7 +52,6 @@
 
 
 
-
 <img src="assets/images/virtualGlasses.png" onclick="openVirtualGame()"style="width: 30vw;
   height: calc(width * 100); position: absolute; top: 138vw; left: 56vw; z-index:0; cursor: crosshair;">
 
@@ -69,23 +68,44 @@
 <img src="assets/images/redTelevision.png" style="width: 56vw; height: calc(width * 1.2);
   height: calc(width * 100); position: absolute; top: 18vw; left: 7vw; z-index: 1;">
 
+<img id="cups" src="assets/images/cups.png" onclick="dropIt()" style="width: 35vw; 
+  height: calc(width * 100); position: absolute; top: 43vw; left: 63vw; display: block">
+
+
+<div hidden id="coffeeSpiel" class="container">
+  <div class="box">
+    <span></span>
+    <div class="content">
+      <h2>COFFEE CUP ADVENTURE</h2>
+      <p>These were cups I made with Puzzled Escape Games. Each cup contains a host of puzzles that lead to a greater online Escape Game adventure. Click on the buy button to buy them from Puzzled.</p>
+      <a href="#">  BUY  </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 <img src="assets/images/coffeeCup1.png" onclick="dropIt()" style="width: 20vw; height: calc(width * 1.2);
-  height: calc(width * 100); position: absolute; top: 39vw; left: 63vw; z-index: 5;">
+  height: calc(width * 100); position: absolute; top: 39vw; left: 63vw; z-index: 5; display: none;">
 
 <img src="assets/images/shelfFullSize.png" style="width: 100vw; height: calc(width * 1.2);
   height: calc(width * 100); position: absolute; top: -0.5vw; left: 0vw; z-index: -1;             display:none">
 
-<img src="assets/images/camera.png" style="width: 30vw; max-width: 400px;
-  height: calc(width * 100); max-height: 300px; position: absolute; top: -1vw; left: 56vw; z-index: -2;">
+<img src="assets/images/camera.png" style="width: 30vw; 
+  height: calc(width * 100); position: absolute; top: -0.5vw; left: 56vw; z-index: -2;">
 
 <img src="assets/images/greenPlant.png" style="width: 30vw;
-  height: calc(width * 100); position: absolute; top: -11vw; left: -10vw; z-index: 8;   -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);       display: none;">
+  height: calc(width * 100); position: absolute; top: -11vw; left: -13vw; z-index: 8;   -webkit-transform: scaleX(-1);
+  transform: scaleX(1);       display: block;">
 
 <img src="assets/images/rod.png" style="width: 2vw;
   height: calc(100vw * 1.5); position: absolute; top: 8vw; left: 10.65vw; z-index: 7;   -ms-transform: rotate(-0.1deg); /* IE 9 */
-  transform: rotate(-0.1deg);       display:none">
+  transform: rotate(-0.1deg);       display:block">
 
 <img src="assets/images/bookTemp.png" onclick="openBook();" style="width: 30vw;
   height: calc(width * 100); position: absolute; z-index: 65; cursor: pointer; width: 40vw; height: auto; 
@@ -112,36 +132,42 @@
 
 
 
-
 <div id="about" class="insideTVframe scrollingText"  style="display: block;">
-<p style="display: block;">Hi, I'm Tom Erik. I make things. Like this website.Click on some, buttons, see some of my work. 
-
-
+<p class="tvText" style="display: block;"><br>Hi, I'm Tom Erik,<br><br>I've been called an influencers' influencer.<br><br>I make things, including dry jokes. I also make things wet. Ask your mom. <br>I'm sure it's hard to believe, I'm not a comedian. To learn more...
 </p>
-<h6>Or play some of the games.</h6>
+
+<h6>...change the channels</h6>
 </div>
 
 
-<div id="scrollingText" class="insideTVframe"></div>
 
 
 
-<video id="optionOne" class="insideTVframe" style="" autoplay="" loop muted="" webkit-playsinline playsinline>
+
+
+<video hidden id="optionOne" class="insideTVframe video" style="margin-top: 0vw;height:30vw" autoplay="" loop muted="" webkit-playsinline playsinline>
 <source src="assets/videos/escobar.mp4" type="video/mp4">
 </video> 
 
 
-<video hidden id="optionTwo" class="insideTVframe" preload="none">
+<video hidden id="optionTwo" class="insideTVframe video" preload="none">
 <source src="assets/videos/middleProfessor.mp4" type="video/mp4">
 </video> 
 
-<video hidden id="optionThree" class="insideTVframe" poster="https://assets.codepen.io/6093409/river.jpg" preload="none">
+<video hidden id="optionThree" class="insideTVframe video" style="margin-top: 1vw" poster="https://assets.codepen.io/6093409/river.jpg" preload="none">
   <source src="assets/videos/TheBoxFromTheFutureVideoPromo.mp4" type="video/mp4">
 </video>
 
-<video hidden id="optionFour" class="insideTVframe" webkit-playsinline playsinline preload="none">
+<video hidden id="optionFour" class="insideTVframe video" style="margin-top: 1vw" webkit-playsinline playsinline preload="none">
 <source src="assets/videos/vid-182.mp4" type="video/mp4">
 </video> 
+
+
+
+
+
+
+
 
 
 <!--  #tv {
@@ -196,6 +222,8 @@
 
 
 
+
+
 <!-----HOLOGRAM --->
 
 <img src="assets/images/vintageCamera.png" onclick=""style="width: 18vw;
@@ -205,9 +233,22 @@
 <source src="assets/videos/tempHolo.mp4" type="video/mp4">
 </video> 
 
+
+
+<div hidden id="hologramSpiel" class="container">
+  <div class="box">
+    <span></span>
+    <div class="content">
+      <h2>THE LOST WAND</h2>
+      <p>For Puzzled Escape Games' The Lost Wand, I created holograms that the players battled with wands.</p>
+      <a href="#">  BUY  </a>
+    </div>
+  </div>
+</div>
 <!--
 <div class="projectionLight clip" style=""></div>
 -->
+
 
   
 
