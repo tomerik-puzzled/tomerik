@@ -1,13 +1,24 @@
-html {
-  
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-body {color: white;
-justify-content: center;
+html {}
+
+body {
+          width: 100vw;
+          height: calc(100vw * 2);  
+          background-image: url('images/theShelf.jpg'), url('images/theShef7575.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100vw calc(100vw * 2);
+          color: white;
+          justify-content: center;
           text-align: center;
           align-items: center;
           align-content: center;
-          vertical-align: center;}
+          vertical-align: center;
+          margin 0 auto;
+          overflow-x: hidden;
+          font-family: Tahoma;
+        }
 
 
 * {
@@ -17,37 +28,8 @@ justify-content: center;
 
 
 iframe {border-radius: 1%;}
-/*
-p 
-{
-          font-family: Metrophobic;
-          color: green;
-          font-size: 1.2vw;
-          display: flex;
-          font-variant-caps: small-caps;
-          border: solid orange 0px;
-          justify-content: center;
-          text-align: center;
-          align-items: center;
-          align-content: center;
-          vertical-align: center;
-          padding-left: 1vw;
-          padding-right: 1vw;
-}
-*/
 
-  body {
-  background-image: url('images/theShelf.jpg'), url('');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: purple;
-  
-  background-size: 100vw calc(100vw * 2);
-  width: 100vw;
-  border: solid red 0px;
-  height: auto;
-  
-  }
+
   h3 {display: block;}
   h2 {display: none;}
   button {
@@ -365,7 +347,38 @@ p{border-right: solid 0vw rgba(0,255,0,.75);}
 
 
 
+.dial {
+  width: 3.3vh;
+  height: 3.3vh;
+  background: rgba(0, 0, 0, 1.1);
 
+  border-radius: 50%;
+  position: absolute;
+  top: 10.5vh;
+  align-items: center;
+  justify-content: center;
+  left: 24vh;
+    z-index: 1;
+
+}
+
+.direction-indicator {
+  width: 0.7vh;
+  height: 0.7vh;
+  border-radius: 50%;
+  background: #FF44D1;
+  position: absolute;
+  top: 0.2vh;
+  left: calc(50% - 0.8vh);
+  opacity: 0.4;
+}
+
+
+h5 {color: white; position: absolute; left: 14vw; top: 6vw;}
+
+#success {color: white; position: absolute; left: 18vw; top: 15vw;
+
+}
 
 
 

@@ -1,7 +1,4 @@
 
-$(document).ready(function(){
-   $(".row").removeClass("offset");
-});
 
 var lfour = 0;
 var lthree = 0;
@@ -113,5 +110,7 @@ function closeModal() {
     document.getElementById('modalTotal').style.display ='none';
     document.getElementById('modalVirtualGame').style.display ='none';
 }
+
+
 
 

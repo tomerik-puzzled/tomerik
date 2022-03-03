@@ -1,58 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+html {}
 
-
-html {
-
-}
-
-body {color: white;
-justify-content: center;
-          text-align: center;
-          align-items: center;
-          align-content: center;
-          vertical-align: center;
-          margin 0 auto;
-overflow-x: hidden;
-font-family: Tahoma;
-        }
-
-
-* {
-  box-sizing: border-box;
-}
-
-
-
-iframe {border-radius: 1%;}
-/*
-p 
-{
-          font-family: Metrophobic;
-          color: green;
-          font-size: 1.2vw;
-          display: flex;
-          font-variant-caps: small-caps;
-          border: solid orange 0px;
+body {
+          width: 100vw;
+          height: calc(100vw * 2);  
+          background-image: url('images/theShelfwcups.jpg'), url('images/theShef7575.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100vw calc(100vw * 2);
+          color: white;
           justify-content: center;
           text-align: center;
           align-items: center;
           align-content: center;
           vertical-align: center;
-          padding-left: 1vw;
-          padding-right: 1vw;
-}
-*/
+          margin 0 auto;
+          overflow-x: hidden;
+          font-family: Tahoma;
+        }
+
+
+* {box-sizing: border-box;}
+
+
+
+iframe {border-radius: 1%;}
 
 
   body {
-  width: 100vw;
-  height: calc(100vw * 2);  
-
-  background-image: url('images/theShelfwcups.jpg'), url('images/theShef7575.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100vw calc(100vw * 2);
   }
 
    button {
@@ -301,7 +277,7 @@ h6 {
 
 
 
-.container {
+.container1 {
   position: relative;
   /*display: flex;*/
   justify-content: center;
@@ -310,7 +286,7 @@ h6 {
   flex-wrap: wrap;
 }
 
-.container .box {
+.container1 .box {
   position: relative;
   width: 320px;
   height: 400px;
@@ -323,11 +299,11 @@ h6 {
   transition: 0.5s;
 }
 
-.container .box:hover {
+.container1 .box:hover {
   transform: translatey(-1vw);
 }
 
-.container .box::before {
+.container1 .box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -337,7 +313,7 @@ h6 {
   background: linear-gradient(45deg, blue, skyblue);
 }
 
-.container .box::after {
+.container1 .box::after {
   content: "";
   position: absolute;
   top: 0;
@@ -349,17 +325,17 @@ h6 {
   filter: blur(30px);
 }
 
-.container .box:nth-child(2)::before,
-.container .box:nth-child(2)::after {
+.container1 .box:nth-child(2)::before,
+.container1 .box:nth-child(2)::after {
   background: linear-gradient(315deg, #03a9f4, #ff0058)
 }
 
-.container .box:nth-child(3)::before,
-.container .box:nth-child(3)::after {
+.container1 .box:nth-child(3)::before,
+.container1 .box:nth-child(3)::after {
   background: linear-gradient(315deg, #4dff03, #00d0ff)
 }
 
-.container .box span {
+.container1 .box span {
   position: absolute;
   top: 6px;
   left: 6px;
@@ -369,7 +345,7 @@ h6 {
   z-index: 2;
 }
 
-.container .box span:before {
+.container1 .box span:before {
   content: "";
   position: absolute;
   top: 0;
@@ -380,26 +356,26 @@ h6 {
   pointer-events: none;
 }
 
-.container .box .content {
+.container1 .box .content {
   position: relative;
   z-index: 10;
   padding: 20px 40px;
 }
 
-.container .box .content h2 {
+.container1 .box .content h2 {
   font-size: 2em;
   color: #FFF;
   margin-bottom: 10px;
 } 
 
-.container .box .content p {
+.container1 .box .content p {
   font-size: 1.1em;
   color: #FFF;
   margin-bottom: 10px;
   line-height: 1.4em;
 }
 
-.container .box .content a {
+.container1 .box .content a {
   display: inline-block;
   font-size: 1.1em;
   color: #111;
@@ -425,6 +401,44 @@ h6 {
 #hologramSpiel:hover {display: flex}
 
 
+
+
+
+
+
+
+.dial {
+  width: 7vw;
+  height: 7vw;
+  background: rgba(0, 0, 0, 0.1);
+
+  border-radius: 50%;
+  position: absolute;
+  top: 22.4vw;
+  align-items: center;
+  justify-content: center;
+  left: 52vw;
+    z-index: 1;
+
+}
+
+.direction-indicator {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background: #FF44D1;
+  position: absolute;
+  top: 0.2vw;
+  left: calc(50% - 25px);
+  opacity: 0.4;
+}
+
+
+h5 {color: white; position: absolute; left: 14vw; top: 10vw;}
+
+#success {color: white; position: absolute; left: 18vw; top: 15vw;
+
+}
 
 
 /*
