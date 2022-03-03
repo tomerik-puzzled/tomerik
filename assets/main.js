@@ -40,6 +40,7 @@ function activateTwo() {
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='none';
   document.getElementById('about').style.display ='block';
+  document.getElementById("optionFour").muted = true;
   }
 
 function activateThree() {
@@ -67,9 +68,34 @@ function activateFour() {
 
 
 
+
+
+function muteVideos() {
+
+
+     //document.getElementById("optionFour").muted = true;
+
+  var soundMuted = document.getElementById("optionFour").muted;
+    if (soundMuted === false) { document.getElementById("optionFour").muted = true; soundMuted = true}
+      else  {document.getElementById("optionFour").muted = false;}
+
+  var soundMuted3 = document.getElementById("optionThree").muted;
+    if (soundMuted3 === false) { document.getElementById("optionThree").muted = true; soundMuted3 = true}
+      else  {document.getElementById("optionThree").muted = false;}
+
+
+
+  
+  }
+
+
+
+
+
 function playVideo4() {
   if (lfour === 0) {
     $('#optionFour').trigger('play');
+    
     lfour = 1;
   } else {
     $('#optionFour').trigger('pause');

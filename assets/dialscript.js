@@ -29,7 +29,8 @@ function startTracking(e) {
     transform: pipe(
     wrap(0, 360),
     snap([0, 45, 90, 135, 180, 225, 270, 315, 360])),
-
+/*0 = 25,      snap([25, 80, 108, 164, 220, 274, 330, 360])),
+ */
     onUpdate: dialRotation,
     onStop: () => pointerAngle.stop() }).
   start();
@@ -39,11 +40,10 @@ function stopTracking() {
   dialRotation.stop();
   document.getElementById('changeThis').innerHTML = dialRotation.get();
 
-  if (dialRotation.get() == 90) {activateFour()}
-  if (dialRotation.get() == 45) {  activateOne()}
-
- if (dialRotation.get() == 135) {  activateTwo()}
-   if (dialRotation.get() == 180) {  activateThree()}
+  if (dialRotation.get() == 45)   {  activateOne()}
+  if (dialRotation.get() == 90)  {  activateTwo()}
+  if (dialRotation.get() == 135)  {  activateThree()}
+  if (dialRotation.get() == 180)   {activateFour()}
 
 }
 

@@ -75,13 +75,11 @@
     <div class="direction-indicator"></div>
   </div>
 
-
-<h5 id="changeThis">Change This</h5>
-<h5 id="success">Fail</h5>
-
 <script src='https://s3.amazonaws.com/popmotion.io/static/dist/popmotion.min.js'></script><script  src="assets/dialscript.js"></script>
 
 
+<h5 id="changeThis" class="dialInfo">Change This</h5>
+<h5 id="success" class="dialInfo">Fail</h5>
 
 
 
@@ -90,21 +88,13 @@
   height: calc(width * 100); position: absolute; top: 43vw; left: 63vw; display: block; opacity:0.01">
 
 
-<div hidden id="coffeeSpiel" class="container1">
-  <div class="box">
-    <span></span>
-    <div class="content">
-      <h2>COFFEE CUP ADVENTURE</h2>
-      <p>These were cups I made with Puzzled Escape Games. Each cup contains a host of puzzles that lead to a greater online Escape Game adventure. Click on the buy button to buy them from Puzzled.</p>
-      <a href="#">  BUY  </a>
+    <div hidden id="coffeeSpiel" class="container1"><div class="box"><span></span>
+        <div class="content">
+          <h2>COFFEE CUP ADVENTURE</h2>
+          <p>These were cups I made with Puzzled Escape Games. Each cup contains a host of puzzles that lead to a greater online Escape Game adventure. Click on the buy button to buy them from Puzzled.</p>
+          <a href="#">  BUY  </a>
+        </div></div>
     </div>
-  </div>
-</div>
-
-
-
-
-
 
 
 
@@ -129,9 +119,28 @@
   height: calc(width * 100); position: absolute; z-index: 65; cursor: pointer; width: 40vw; height: auto; 
   top: 70vw; left: 45vw; z-index: 5; ">
 
-<img src="assets/images/futureBox.png" class="" onclick="openBFTF();" style="width: 30vw;
-  height: calc(width * 100); position: absolute; z-index: 65; cursor: crosshair; width: 35vw; height: auto; 
-  top: 108vw; left: 9vw; z-index: 5; ">
+  <img src="assets/images/rod.png" style="width: 2vw;
+  height: calc(100vw * 1.5); position: absolute; top: 8vw; left: 10.65vw;    -ms-transform: rotate(-0.1deg); /* IE 9 */
+  transform: rotate(-0.1deg);       display:block">
+
+<img id="futureBox" src="assets/images/futureBox.png" class="" onclick="openBFTF();" style="width: 30vw;
+  height: calc(width * 100); position: absolute; z-index: 65; cursor: pointer; width: 35vw; height: auto; 
+  top: 108vw; left: 9vw; z-index: 0">
+
+
+
+                  <div hidden id="futureBoxSpiel" class="container1">
+                    <div class="box" >
+                      <span></span>
+                      <div class="content">
+                        <h2>THE BOX FROM THE FUTURE</h2>
+                        <p>The Box From The Future, was Puzzled Escape Games' (an Escape Game company I founded) first mail-delivered escape game experience in a box. I made the storyline, did the videos, and created the puzzles.</p>
+                        <a href="#">  BUY  </a>
+                      </div>
+                    </div>
+                  </div>
+
+
 
 <!--
 <h3 class="hideMe" style="font-size: 80px; text-align: center; z-index: 100;">VERTICAL</h3>
@@ -140,21 +149,49 @@
 -->
 
 
-<button class="buttonOne" onclick="activateOne();"></button> 
+<button id="buttonOne" class="tvButtons" onclick="activateOne();"></button> 
 
-<button class="buttonTwo" onclick="activateTwo();"></button>
+<button id="buttonTwo" class="tvButtons" onclick="activateTwo();"></button>
  
-<button class="buttonThree" onclick="activateThree();"></button>
+<button id="buttonThree" class="tvButtons" onclick="activateThree();"></button>
 
-<button class="buttonFour" onclick="activateFour();"></button>
+<button id="buttonFour" class="tvButtons" onclick="activateFour();"></button>
+
+<button id="buttonMute" class="tvButtons" onclick="muteVideos();"></button>
 
 
 
-<div id="about" class="insideTVframe scrollingText"  style="display: block;">
-<p class="tvText" style="display: block;"><br>Hi, I'm Tom Erik,<br><br>I've been called an influencers' influencer.<br><br>I make things, including dry jokes. I also make things wet. Ask your mom. <br>I'm sure it's hard to believe, I'm not a comedian. To learn more...
+
+
+
+
+
+
+
+
+<video hidden id="optionOne" class="insideTVframe video" style="" poster="assets/images/static.png" autoplay="" loop muted="" webkit-playsinline playsinline>
+<source src="assets/videos/escobar.mp4" type="video/mp4">
+</video> 
+
+
+<video hidden id="optionTwo" class="insideTVframe video" poster="assets/images/static.png"preload="none">
+<source src="assets/videos/middleProfessor.mp4" type="video/mp4">
+</video> 
+
+<video hidden id="optionThree" class="insideTVframe video" style="" poster="assets/images/static.png" preload="none">
+  <source src="assets/videos/TheBoxFromTheFutureVideoPromo.mp4" type="video/mp4">
+</video>
+
+<video hidden id="optionFour" class="insideTVframe video" style="" poster="assets/images/static.png" webkit-playsinline playsinline preload="none">
+<source src="assets/videos/vid-182.mp4" type="video/mp4">
+</video> 
+
+
+<div id="about" class="insideTVframe">
+<p class="tvText" style=""><br>   Hi, I'm Tom Erik,<br><br>I've been called an influencers' influencer.<br><br><br>I make things, including dry jokes. I also make things wet. Ask your mom. <br>If you want to get a hold of me to say something nice, call 69 on the phone below. No joke, it'll read out how to get in touch with me. If you want to get a hold of me to offer me a job, call 3142 on the phone below, when I answer, whisper your financial benefits and hang up before the beep. To learn more...
 </p>
 
-<h6>...change the channels</h6>
+<h6>...change the channels</h6> 
 </div>
 
 
@@ -162,53 +199,6 @@
 
 
 
-
-<video hidden id="optionOne" class="insideTVframe video" style="margin-top: 0vw;height:30vw" autoplay="" loop muted="" webkit-playsinline playsinline>
-<source src="assets/videos/escobar.mp4" type="video/mp4">
-</video> 
-
-
-<video hidden id="optionTwo" class="insideTVframe video" preload="none">
-<source src="assets/videos/middleProfessor.mp4" type="video/mp4">
-</video> 
-
-<video hidden id="optionThree" class="insideTVframe video" style="margin-top: 1vw" poster="https://assets.codepen.io/6093409/river.jpg" preload="none">
-  <source src="assets/videos/TheBoxFromTheFutureVideoPromo.mp4" type="video/mp4">
-</video>
-
-<video hidden id="optionFour" class="insideTVframe video" style="margin-top: 1vw" webkit-playsinline playsinline preload="none">
-<source src="assets/videos/vid-182.mp4" type="video/mp4">
-</video> 
-
-
-
-
-
-
-
-
-
-<!--  #tv {
-      position: relative;
-      width: 200px;
-      height: 150px;
-      margin: 20px 0;
-      background: red;
-      border-radius: 50% / 10%;
-      color: white;
-      text-align: center;
-      text-indent: .1em;
-    }
-    #tv:before {
-      content: '';
-      position: absolute;
-      top: 10%;
-      bottom: 10%;
-      right: -5%;
-      left: -5%;
-      background: inherit;
-      border-radius: 5% / 50%;
-    }-->
 
 <!----- BOOK POP UP --->
 <div hidden id="modalTotal" class="surroundings" onclick="closeModal();" style="">
@@ -336,21 +326,6 @@ My children's book "The Floor is Full of Sharks" is available for purchase by cl
 -->
 
 
-<!--
-
--->
-
-<!--
-
-<div id="modalTotal" class="phoneSurroundings" style="">
-    <div class="phoneModule-border-wrap"><div class="module">
-        <iframe id="phoneIframeModal" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
-        <span class="close" onclick="closeModal()">&times;</span>
-</div>
-</div>
-</div>
--->
-
 
 <!------------------------------------------------------------------------------------------------------------------->
             <!--CHAT BOX FLOWXO
@@ -365,11 +340,7 @@ My children's book "The Floor is Full of Sharks" is available for purchase by cl
             <div id="phoneOverlay" class="vintagePhone" onclick="openPhoneiFrame();"></div>
 
 
-<script>
-   
 
-
-</script>
 
 
 <!--    

@@ -21,32 +21,202 @@ body {
         }
 
 
-* {box-sizing: border-box;}
-
+/*
+* {box-sizing: border-box;}*/
 
 
 iframe {border-radius: 1%;}
 
 
-  body {
-  }
+h1
+{
+          font-family: Metrophobic;
+          color: white;
+          font-size: 3vw;         
+}
 
-   button {
+
+/*------------------------------------
+--------------------------------------
+-------EVERYTHING TO DO WITH TV-------
+------------------------------------*/
+
+
+/*FOR TV BUTTONS*/
+.tvButtons {
   position: absolute;
-  left: 48.6vw;
-  padding: 0;
-  margin: 0;
+  left: 48.7vw;
+  padding: 0px;
+  margin: 0px;
   background-color: rgba(0,255,255,0.3);
-  border: solid white 2px;
   border-radius: 100%;
-  box-shadow: 0 3px 0 0 #6A845F;
   color: #000000;
   width: 2vw;
   height: 2vw;
   cursor: pointer;
   transition-delay: 0,5s;
-  outline: none;
   z-index: 1;
+}
+
+
+button:hover {
+  background-color: rgba(0,0,255,0.3);
+  transform: scale(0.95);
+        }
+
+button:focus {outline:0;}
+
+#buttonOne {top: 24.8vw; left: vw;}
+#buttonTwo {top: 30.1vw; left: ;}
+#buttonThree { top: 33.9vw; left: ;}
+#buttonFour { top: 38.2vw; }
+#buttonMute { top: 47.5vw; left: 48.6vw;}
+
+
+/*----- DIALS FOR TV ------*/
+
+.dial {
+  width: 7vw;
+  height: 7vw;
+  background: rgba(155, 0, 0, 0.0);
+  border-radius: 50%;
+  position: absolute;
+  top: 22.4vw;
+  align-items: center;
+  justify-content: center;
+  left: 52vw;
+  z-index: 1;
+  }
+
+
+ .direction-indicator {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  background: url(images/dialWithArrow2.png);
+  background-position: center;
+  background-size: 7vw 7vw;
+
+  position: absolute;
+   opacity: 1;
+  }
+
+
+/* OG
+.direction-indicator {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background: #FF44D1;
+  position: absolute;
+  top: 0.2vw;
+  left: calc(50% - 25px);
+  opacity: 0.4;
+  }
+*/
+ 
+
+
+
+.dialInfo {color: black; font-size: 3vw; ;position: absolute; left: 65vw; top: 20vw; opacity: 0}
+
+#success {color: white; position: absolute;  top: 25vw; display: block}
+
+
+
+
+
+/*DIV THAT'S THE CONTAINER BEHIND THE TV*/
+.insideTVframe {
+  position: absolute;
+  display: block;
+  background-color: rgba(0, 0, 0, 1.0);
+  top: 22.7vw;
+  left: 12vw;
+  /*border-radius: 36% 7% 7% 8% / 19% 10% 53% 8%; */
+  width: 33vw;
+
+  height:  26vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word; word-wrap: break-word;
+  white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word; 
+   align-items: left;
+   align-content: left;
+   vertical-align: center;
+   
+}
+
+.vsideo {width: 33vw;
+        padding-top: 1.5vw
+        }
+
+
+.tvText {
+     position: relative;     
+    font-family: 'Press Start 2P', cursive;
+  font-size: 0.8vw;
+  padding-left: 1vw;
+  color: rgba(10,255,20,.70);
+  font-weight: normal;
+  overflow-wrap: break-word; word-wrap: break-word;
+  overflow-wrap: break-word; word-wrap: break-word;
+  white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word; 
+   text-align: left;
+   line-height: 1.2;
+   padding-bottom: 0px;
+   border-right: solid 0vw rgba(0,255,0,.75);
+   z-index: 1;
+   margin-left: 1vw;
+   margin-right: 0.5vw;
+
+}
+
+h6 {
+  border-right: solid 0.3vw rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: none;
+     position: relative;
+  font-family: 'Source Code Pro', monospace;  
+    font-family: 'Press Start 2P', cursive;
+  font-size: 1.1vw;
+  padding-left: 0vw;
+  color: rgba(10,255,20,.70);
+  font-weight: normal;
+  text-align: left;
+  margin-top: -1vw;
+  padding-top: 0px;
+  z-index: 1;
+  margin-left: 2vw;
+}
+
+/* Animation */
+h6 {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(22,end) infinite;
+}
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 90%;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
 }
 
 
@@ -141,8 +311,10 @@ normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, dif
 
 
 
-/*   HOLOGRAM PROJECTIONS END   */
-
+/*    
+-------HOLOGRAM PROJECTIONS END -------
+--------------------------------------
+*/
 
 
 
@@ -179,102 +351,14 @@ opacity: 0.4;
 }
 
 
-.insideTVframe {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 1.0);
-  top: 20.7vw;
-  left: 9.5vw;
-border-radius: 36% 7% 7% 8% / 19% 10% 53% 8%;
-width: 36.5vw; 
-height:  calc(18.3vw * 1.5);
-word-wrap: break-word;
-overflow-wrap: break-word; word-wrap: break-word;
-white-space: pre-wrap;      /* CSS3 */   
-   white-space: -moz-pre-wrap; /* Firefox */    
-   white-space: -pre-wrap;     /* Opera <7 */   
-   white-space: -o-pre-wrap;   /* Opera 7 */    
-   word-wrap: break-word; 
-   padding-left: 5vw;
-   
-
-}
-
-.video {padding-left: 0vw;}
-
-.scrollingText {
-z-index: -1;
-padding: 1vw;
-padding-left: 4vw;
-padding-right: 2vw;
-}
 
 
 
 
-
-.tvText {
-     position: relative;
-     
-    font-family: 'Press Start 2P', cursive;
-  font-size: 1.1vw;
-  padding-left: 1vw;
-  color: rgba(10,255,20,.70);
-  font-weight: normal;
-  overflow-wrap: break-word; word-wrap: break-word;
-  overflow-wrap: break-word; word-wrap: break-word;
-white-space: pre-wrap;      /* CSS3 */   
-   white-space: -moz-pre-wrap; /* Firefox */    
-   white-space: -pre-wrap;     /* Opera <7 */   
-   white-space: -o-pre-wrap;   /* Opera 7 */    
-   word-wrap: break-word; 
-   text-align: left;
-   line-height: 1.2;
-   padding-bottom: 0px;
-   border-right: solid 0vw rgba(0,255,0,.75);
-
-}
-
-h6 {
-  border-right: solid 0.3vw rgba(0,255,0,.75);
-  white-space: nowrap;
-  overflow: hidden;
-  background-color: none;
-     position: relative;
-  font-family: 'Source Code Pro', monospace;  
-    font-family: 'Press Start 2P', cursive;
-  font-size: 1.1vw;
-  padding-left: 0vw;
-  color: rgba(10,255,20,.70);
-  font-weight: normal;
-  text-align: left;
-  margin-top: 0;
-  padding-top: 0px;
-}
-
-/* Animation */
-h6 {
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(22,end) infinite;
-}
-
-
-/* text animation */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 90%;}
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
-  to{border-right-color: transparent;}
-}
-
-
-
-
+/*------------------------------------
+--------------------------------------
+-------  HOVER WINDOWS         -------
+------------------------------------*/
 
 
 .container1 {
@@ -284,6 +368,7 @@ h6 {
   align-items: center;
   padding: 40px 0;
   flex-wrap: wrap;
+  z-index: 7;
 }
 
 .container1 .box {
@@ -385,74 +470,37 @@ h6 {
   
 }
 
+.box {
+  width: 60vmin;
+  height: 60vmin;
+  border: 4px solid rgba(255,255,255,0.4);
+  position: relative;  
+}
 
 
-#coffeeSpiel {         position: absolute; top: 39vw; left: 63vw; }
+#coffeeSpiel {position: absolute; top: 39vw; left: 63vw; }
 #cups:hover + #coffeeSpiel {display: flex;}
-
 #coffeeSpiel:hover {display: flex}
 
 
-
-
-#hologramSpiel { 
-      position: absolute; top: 149vw; left: 3vw; }
+#hologramSpiel {position: absolute; top: 149vw; left: 3vw; }
 #hologramVideo:hover + #hologramSpiel {display: flex}
 #hologramSpiel:hover {display: flex}
 
 
+#futureBoxSpiel {position: absolute; top: 109vw; left: 3vw; }
+#futureBox:hover + #futureBoxSpiel {display: flex}
+#futureBoxSpiel:hover {display: flex}
 
 
 
 
 
 
-.dial {
-  width: 7vw;
-  height: 7vw;
-  background: rgba(0, 0, 0, 0.1);
-
-  border-radius: 50%;
-  position: absolute;
-  top: 22.4vw;
-  align-items: center;
-  justify-content: center;
-  left: 52vw;
-    z-index: 1;
-
-}
-
-.direction-indicator {
-  width: 1.5vw;
-  height: 1.5vw;
-  border-radius: 50%;
-  background: #FF44D1;
-  position: absolute;
-  top: 0.2vw;
-  left: calc(50% - 25px);
-  opacity: 0.4;
-}
-
-
-h5 {color: white; position: absolute; left: 14vw; top: 10vw;}
-
-#success {color: white; position: absolute; left: 18vw; top: 15vw;
-
-}
-
-
-/*
-.miniSpiels {font-family: 'Source Code Pro'; color: black;}
-
-#cups:hover + .initialInfoSpiel {opacity: 1; width: 25vw;}
-#cupsSpiel:hover {opacity: 1}
 
 
 
-*/
-
-
-
+/*  TO DISPLAY OR HIDE VERTICAL AND HORIZONTAL TEXT */
 .hideMe {
     -moz-animation: cssAnimation 0s ease-in 0.5s forwards;
     /* Firefox */
@@ -481,105 +529,13 @@ h5 {color: white; position: absolute; left: 14vw; top: 10vw;}
 }
 
 
-.box {
-  width: 60vmin;
-  height: 60vmin;
-  border: 1px dashed rgba(255,255,255,0.4);
-  position: relative;
-  
-  
-}
 
 
 
-.shape {
-  width: 100%;
-  height: 100%;
-  transition: border-radius 1s ease-out;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: morph 8s ease-in-out infinite both alternate;
-  position: absolute;
-  overflow: hidden;
-  z-index: 5;
-}
-/*
-.bd {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url(https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=2868fd5c3f30697d38732224e0ef51ed);
-  background-size: 100%;
-  background-position: center center;
-  display: flex;
-  color: #003;
-  font-size: 5vw;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  animation: spin 12s linear infinite reverse;
-  opacity: 1;
-  z-index: 2;
-}
-*/
-
-#background-video {
-  width: 100%;
-  height:  auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-
-
-
-
-
-
-button:hover {
-  background-color: rgba(0,0,255,0.3);
-  transform: scale(0.95);
-        }
-
-button:focus {outline:0;}
-
-.buttonOne {top: 26.4vw; left: ;}
-.buttonTwo {top: 30.1vw; left: ;}
-.buttonThree { top: 33.9vw; left: ;}
-.buttonFour { top: 38.2vw; left: ;}
-
-
-.videoDisplayClass {
-  width: 58vw;
-  height: 35vw;
-  background-color: black;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin: 0 auto;
-  position: absolute;
-  opacity: 1;
-
-        top: 13vh;
-        left: 20.6vw;
-    
-  
-  border-radius: 5px;
-  border: solid yellow 0px;
-  color: white;
-}
-
-
-
-
-
-
-
-
+/*------------------------------------
+--------------------------------------
+-------  COFFEE STEAM         -------
+------------------------------------*/
 
 .steam {
   position: absolute;
@@ -792,6 +748,11 @@ a:hover {
   cursor: pointer;
 }
 
+
+
+
+
+/*OUTER "BACKGROUND" WHEN A MODAL HAS BEEN OPENED*/
 .surroundings {
   background-color: rgba(0, 0, 0, 0.1); 
   width: 100vw; height: 100vh; 
@@ -804,7 +765,7 @@ a:hover {
 }
 
 
-
+/*ONE OF THE CONTAINERS PERTAINING TO THE MODALS*/
 .module {
   background: green;
   color: white;
@@ -840,23 +801,7 @@ a:hover {
 
 
 
-h1
-{
-          font-family: Metrophobic;
-          color: white;
-          font-size: 3vw;
-          display: flex;
-          font-variant-caps: small-caps;
-          border: solid orange 0px;
-          justify-content: center;
-          text-align: center;
-          align-items: center;
-          align-content: center;
-          vertical-align: center;
-          border: solid red 0px;
-          padding: 1vw;
-         
-}
+
 
 
 
