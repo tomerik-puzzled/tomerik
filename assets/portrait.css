@@ -491,7 +491,7 @@ opacity: 0.4;
 
 #futureBoxSpiel {position: relative; }
 #futureBox:hover + #futureBoxSpiel {display: flex}
-#futureBoxSpiel:hover {display: flex}
+#futureBoxSpiel:hover, #futureBoxSpiel {display: flex}
 
 
 
