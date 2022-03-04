@@ -9,7 +9,6 @@ var vid4 = document.getElementById('optionFour');
 
 
 
-
 function openBook() {
   document.getElementById('modalTotal').style.display ='block';
 }
@@ -31,6 +30,7 @@ function activateOne() {
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='none';
   document.getElementById('about').style.display ='none';
+  document.getElementById('aboutContact').style.display ='none';
               }   
 
 
@@ -39,7 +39,8 @@ function activateTwo() {
   //document.getElementById('optionTwo').style.display ='block';
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='none';
-  document.getElementById('about').style.display ='block';
+  document.getElementById('about').style.display ='none';
+  document.getElementById('aboutContact').style.display ='block';
   document.getElementById("optionFour").muted = true;
   }
 
@@ -47,6 +48,7 @@ function activateThree() {
   document.getElementById('optionOne').style.display ='none';
   document.getElementById('optionTwo').style.display ='none';
   document.getElementById('about').style.display ='none';
+  document.getElementById('aboutContact').style.display ='none';
   document.getElementById('optionThree').style.display ='block';
   document.getElementById('optionFour').style.display ='none';
     $('#optionFour').trigger('pause');
@@ -60,6 +62,7 @@ function activateFour() {
   document.getElementById('optionOne').style.display ='none';
   document.getElementById('optionTwo').style.display ='none';
   document.getElementById('about').style.display ='none';
+  document.getElementById('aboutContact').style.display ='none';
   document.getElementById('optionThree').style.display ='none';
   document.getElementById('optionFour').style.display ='block';
   playVideo4();
