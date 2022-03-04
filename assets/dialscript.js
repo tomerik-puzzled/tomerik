@@ -29,11 +29,11 @@ function startTracking(e) {
     transform: pipe(
     wrap(0, 360),
     snap([0, 45, 90, 135, 180, 225, 270, 315, 360])),
-/*0 = 25,      snap([25, 80, 108, 164, 220, 274, 330, 360])),
- */
+
     onUpdate: dialRotation,
     onStop: () => pointerAngle.stop() }).
   start();
+  var x = document.getElementById("click"); x.play();
 }
 
 function stopTracking() {
