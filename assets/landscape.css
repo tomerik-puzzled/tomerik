@@ -369,15 +369,16 @@ opacity: 0.4;
   /*display: flex;*/
   justify-content: center;
   align-items: center;
-  padding: 4vw 0;
+  padding: 2vw 2vw;
   flex-wrap: wrap;
   z-index: 7;
 }
 
 .container1 .box {
   position: relative;
-  width: 24vw;
-  height: 32vw;
+  width: 28vw;
+  min-height: 30vw;
+  height: auto;
   color: #FFF;
   background-color: #111;
   display: flex;
@@ -496,7 +497,9 @@ opacity: 0.4;
 #futureBoxSpiel:hover {display: flex}
 
 
-
+#professorSpiel {position: absolute; top: 109vw; left: 3vw; }
+#virtualGlasses:hover + #professorSpiel {display: flex}
+#professorSpiel:hover {display: flex}
 
 
 
@@ -760,8 +763,8 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.1); 
   width: 100vw; height: 100vh; 
   position: fixed; left: 0px; top: 0px; 
-  backdrop-filter: blur(5px) grayscale(1) brightness(3.0); 
-  -webkit-backdrop-filter: grayscale(1) brightness(3.0); 
+  backdrop-filter: blur(5px) brightness(0.7); 
+  -webkit-backdrop-filter: brightness(0.7); 
   z-index: 80;
 
  /* backdrop-filter: brightness(4.0);*/

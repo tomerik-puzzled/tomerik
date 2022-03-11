@@ -479,19 +479,19 @@ opacity: 0.4;
 }
 
 
-#coffeeSpiel {position: relative; margin: 0}
+#coffeeSpiel {position: fixed; margin-top: 10%;}
 #cups:hover + #coffeeSpiel {display: flex;}
 #coffeeSpiel:hover {display: flex}
 
 
-#hologramSpiel {position: absolute; top: 149vw; left: 3vw; }
+#hologramSpiel {position: fixed; margin-top: 10%;}
 #hologramVideo:hover + #hologramSpiel {display: flex}
 #hologramSpiel:hover {display: flex}
 
 
 #futureBoxSpiel {position: relative; }
 #futureBox:hover + #futureBoxSpiel {display: flex}
-#futureBoxSpiel:hover, #futureBoxSpiel {display: flex}
+#futureBoxSpiel:hover {display: flex}
 
 
 
@@ -735,7 +735,7 @@ a:hover {
 /* The Close Button */
 .close {
   color: blue;
-  font-size: 3vw;
+  font-size: 5vh;
   font-weight: bold;
   z-index: 100;
   position: absolute;
@@ -759,8 +759,8 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.1); 
   width: 100vw; height: 100vh; 
   position: fixed; left: 0px; top: 0px; 
-  backdrop-filter: blur(5px) grayscale(1) brightness(3.0); 
-  -webkit-backdrop-filter: grayscale(1) brightness(3.0); 
+  backdrop-filter: blur(5px) brightness(0.6); 
+  -webkit-backdrop-filter: brightness(0.6); 
   z-index: 80;
 
  /* backdrop-filter: brightness(4.0);*/
@@ -773,9 +773,9 @@ a:hover {
   color: white;
   padding: 0em;
   position: relative;
-  left: 5%;
-  border-radius: 20px;
-  width: 90vw;
+  margin-left: 2vw;
+  border-radius: 2vh;
+  width: 85vw;
   border: 10px solid rgba(0, 0, 0, 0.9);
   height: 80vh;
 

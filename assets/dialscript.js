@@ -17,6 +17,7 @@ function startTracking(e) {
       const dialCenter = {
         x: dialPos.left + dialPos.width / 2,
         y: dialPos.top + dialPos.height / 2 };
+      var x = document.getElementById("click"); x.play();
 
       const angleFromCenter = angle(dialCenter, v);
 
@@ -33,7 +34,7 @@ function startTracking(e) {
     onUpdate: dialRotation,
     onStop: () => pointerAngle.stop() }).
   start();
-  var x = document.getElementById("click"); x.play();
+  
 }
 
 function stopTracking() {
