@@ -30,17 +30,20 @@ body {
 
 #product-component-1647289725858 {}
 
-h1 { position: relative; 
-    padding-top: 3vw; 
+h1 { position: fixed;
+    bottom: 0vh; 
+    left: 10%;
+    right: 10%;
+    padding-top: 4vw; 
     font-family: 'Caroni'; font-family: 'Open Sans', sans-serif; margin-bottom: 1vh; margin-top: 2vh; text-transform: uppercase; 
-    background: linear-gradient(90deg, blue 0%,skyblue 10%,darkblue 20%,black 30%,slateblue 40%,cadetblue 50%,slateblue 60%,rgba(10,10,183,1) 70%,dodgerblue 80%,rgba(250,48,30,1) 90%,rgba(255,201,88,1) 100%);
+    background: linear-gradient(90deg, blue 0%,skyblue 10%,darkblue 20%,black 30%,slateblue 40%,cadetblue 50%,red 60%,rgba(10,10,183,1) 70%,dodgerblue 80%,rgba(250,48,30,1) 90%,rgba(255,201,88,1) 100%);
     background-size: 100% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-style: bolder;
     transition: 1.5s;
-    font-size: 8vw;
-    
+    font-size: 4vw;
+    line-height: 1.1;    
   }
 
 
@@ -48,10 +51,35 @@ h1 { position: relative;
  hr {display: none; background-color: transparent; width: 92vw; height: 1vw; border: darkblue solid 0.2vw;  position: absolute; top: calc(1.7vw + 6vw); left: 4vw;}
  h3 {display: none; font-size: 1.2vw; text-align: center; position: relative; color: darkblue; font-family: 'Helvetica', cursive; text-transform: none;}
 
+.cloudButton { 
+        background-image: url(images/clipArtCloudSmall.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: transparent;
+        font-family: 'Open Sans', sans-serif;
+        display: inline-block;
+        margin: 0 auto;
+        font-weight: 1.8vw;
+        text-align: center;
+        font-size: 2vw;
+        z-index: 100;
+        position: absolute;
+        transition: 0.2s;
+        cursor: pointer;
+        min-width: 20vw;
+        height: 10vw;
+        border: none;
+        margin-top: -16px;
+      }
+
+.cloudButton:hover {transform: scale(1.1);}
+
 
 .button { 
         background: transparent; color: darkblue; 
         border: transparent;
+
         border-bottom: 0.2vw solid darkblue;
         border-left: 0.2vw solid darkblue;
         border-right: 0.2vw solid transparent;
@@ -61,7 +89,7 @@ h1 { position: relative;
         margin: 0 auto;
         font-weight: 1.8vw;
         text-align: center;
-        font-size: 3vw;
+        font-size: 2vw;
         z-index: 100;
         position: absolute;
         transition: 0.2s;
@@ -111,7 +139,7 @@ background-size: 500% 100%;
 .buyContent {
   cursor: crosshair;
   position: relative; 
-  border: solid blue 2px;
+  border: solid blue 0px;
   width: 100vw;
   height: 60vh;
   justify-content: center;
@@ -128,12 +156,12 @@ background-size: 500% 100%;
 
 .threeWay { float:left; 
             margin: 0;
-             
+             background-color: none;
             width: 30vw;   
             min-height: 50vh; 
             position: relative;}
 
-.centerWay {width: 40vw;}
+.centerWay {width: 40vw; background-color: none}
 
 
 p {margin: 1vh; text-align: left;}
@@ -158,7 +186,7 @@ p {margin: 1vh; text-align: left;}
 
 #water {
   width: 100vw;
-  height: 10vh;
+  height: 5vh;
   position: fixed;
   bottom: 0;
   background: linear-gradient(to right, blue, darkblue, powderblue, aliceblue);
@@ -170,7 +198,8 @@ p {margin: 1vh; text-align: left;}
 
 /*MOBILE*/
 @media only screen and (max-width: 600px)     {
-                  h1 { font-size: 10vw;}
+                  h1 { font-size: 10vw;
+                      padding-top: 4vw; }
                   h1 br {display: block;}
                   h1 span {font-size: 12vw;}
                   .button { font-size: 3.7vw;  }
@@ -179,26 +208,18 @@ p {margin: 1vh; text-align: left;}
                   #water {height: 2vh;}
 
 
+
                                               }
                 
 
 
-
-
-
-
-
-/*LARGE  SCREEN
+/*LARGE  SCREEN*/
 @media only screen and (min-width: 601px) {
-   h1 {font-size: 300vw;
-    
-    }
-
-h1 br {
-  display: none;
- }
+                     
+                  h1 br {display: block;}
+                  h1 span {font-size: 12vw;}
 }
-*/
+
 
 
 

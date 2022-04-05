@@ -11,13 +11,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100vw auto;
   
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   display: inline-block;
   height: 100vh;
   justify-content: center;
   text-align: center;
-  justify-content: center; 
+justify-content: center; 
   align-content: center; vertical-align: center; text-align: center; text-align;
   margin: auto auto;
   margin-top: 0px;
@@ -26,24 +25,23 @@ body {
   font-family: 'Caroni'; font-family: 'Open Sans', sans-serif;
   text-align: center; 
   color: darkblue; font-family: 'Helvetica', cursive;
+
+
+
+
+
 }
 
-#product-component-1647289725858 {}
 
-h1 { position: fixed;
-    bottom: 0vh; 
-    left: 10%;
-    right: 10%;
-    padding-top: 4vw; 
+h1 { position: relative; 
+    padding-top: 3vw; 
     font-family: 'Caroni'; font-family: 'Open Sans', sans-serif; margin-bottom: 1vh; margin-top: 2vh; text-transform: uppercase; 
-    background: linear-gradient(90deg, blue 0%,skyblue 10%,darkblue 20%,black 30%,slateblue 40%,cadetblue 50%,red 60%,rgba(10,10,183,1) 70%,dodgerblue 80%,rgba(250,48,30,1) 90%,rgba(255,201,88,1) 100%);
+    background: linear-gradient(90deg, blue 0%,skyblue 10%,darkblue 20%,black 30%,slateblue 40%,cadetblue 50%,slateblue 60%,rgba(10,10,183,1) 70%,dodgerblue 80%,rgba(250,48,30,1) 90%,rgba(255,201,88,1) 100%);
     background-size: 100% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-style: bolder;
     transition: 1.5s;
-    font-size: 4vw;
-    line-height: 1.1;    
   }
 
 
@@ -51,33 +49,10 @@ h1 { position: fixed;
  hr {display: none; background-color: transparent; width: 92vw; height: 1vw; border: darkblue solid 0.2vw;  position: absolute; top: calc(1.7vw + 6vw); left: 4vw;}
  h3 {display: none; font-size: 1.2vw; text-align: center; position: relative; color: darkblue; font-family: 'Helvetica', cursive; text-transform: none;}
 
-.cloudButton { 
-        background-image: url(images/clipArtCloudSmall.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: transparent;
-        font-family: 'Open Sans', sans-serif;
-        display: inline-block;
-        margin: 0 auto;
-        font-weight: 1.8vw;
-        text-align: center;
-        font-size: 2vw;
-        z-index: 100;
-        position: absolute;
-        transition: 0.2s;
-        cursor: pointer;
-        min-width: 20vw;
-        height: 10vw;
-        border: none;
-        margin-top: -16px;
-      }
-
 
 .button { 
         background: transparent; color: darkblue; 
         border: transparent;
-
         border-bottom: 0.2vw solid darkblue;
         border-left: 0.2vw solid darkblue;
         border-right: 0.2vw solid transparent;
@@ -87,19 +62,22 @@ h1 { position: fixed;
         margin: 0 auto;
         font-weight: 1.8vw;
         text-align: center;
-        font-size: 2vw;
+        font-size: 3vw;
         z-index: 100;
         position: absolute;
         transition: 0.2s;
-        z-index: 100;
         cursor: pointer;
-        min-width: 20vw;
+        min-width: 30vw;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 15px;
-        border-top-left-radius: 30%;
+        border-top-left-radius: 15px;
         border-top-right-radius: 0px;
-        margin-top: -16px;
       }
+
+#buyBook{left: 5vw;}
+#readIt{left: 35vw;}
+#learnMore{left: 65vw;}
+
 
 
 .button:hover {
@@ -126,18 +104,14 @@ background-size: 500% 100%;
   -webkit-text-fill-color: transparent;
 }
 
-#buyBook{left: 5vw;}
-#readIt{left: 35vw;}
-#learnMore{left: 66vw;}
+.header { min-height: 20vh; border:solid red 2px; width: 100vw; }
 
-.header { min-height: 20vh; border:solid red 0px; width: 100vw; }
-
-.midContent {border: 0px solid pink; height: 60vh; width: 100vw;  position: absolute; }
+.midContent {border: 2px solid pink; height: 60vh; width: 100vw;  position: absolute;}
 
 .buyContent {
   cursor: crosshair;
   position: relative; 
-  border: solid blue 0px;
+  border: solid blue 2px;
   width: 100vw;
   height: 60vh;
   justify-content: center;
@@ -152,20 +126,7 @@ background-size: 500% 100%;
 #displaySampleBookID {display:block;}
 
 
-.threeWay { float:left; 
-            margin: 0;
-             background-color: none;
-            width: 30vw;   
-            min-height: 50vh; 
-            position: relative;}
-
-.centerWay {width: 40vw; background-color: none}
-
-
-p {margin: 1vh; text-align: left;}
-
-
-
+.threeWay {float:left; margin: 0;background-color: pink; width: 33.3vw;   min-height: 50vh; position: relative;}
 
 
 .startContent {
@@ -176,53 +137,71 @@ p {margin: 1vh; text-align: left;}
   background-repeat: no-repeat;
     cursor: pointer;
       position: relative; 
-  border: solid black 0px;
+  border: solid black 2px;
   width: 100vw;
   height: 60vh;
       }
 
 
-#water {
-  width: 100vw;
-  height: 5vh;
-  position: fixed;
-  bottom: 0;
-  background: linear-gradient(to right, blue, darkblue, powderblue, aliceblue);
-  left: 0;
-  border-top: 1px solid blue;
+
+
+
+@media only screen and (max-width: 600px) and (orientation:portrait){
+  h1 { font-size: 10vw;  
+  }
+h1 br {
+  display: block;
+ }
+
+
+.threeWay {width: 20vw;   min-height: 50vh;}
+
+.centerWay {width: 60vw; background-color: blue;}
+
+
+.button { 
+        background: transparent; color: darkblue; 
+        border: transparent;
+        border-bottom: 0.2vw solid darkblue;
+        border-left: 0.2vw solid darkblue;
+        border-right: 0.2vw solid transparent;
+        border-top: 0.2vw solid transparent;
+ 
+        margin: 0 auto;
+        font-weight: 1.8vw;
+        text-align: center;
+        font-size: 1.7vh;
+        z-index: 100;
+        position: absolute;
+        transition: 0.2s;
+        min-width: 25vw;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 30%;
+        border-top-right-radius: 0px;
+      }
+
+body {background-color: blue}
+
 }
 
 
 
-/*MOBILE*/
-@media only screen and (max-width: 600px)     {
-                  h1 { font-size: 10vw;
-                      padding-top: 4vw; }
-                  h1 br {display: block;}
-                  h1 span {font-size: 12vw;}
-                  .button { font-size: 3.7vw;  }
-                  .threeWay {width: 10vw;}
-                  .centerWay {width: 80vw;}
-                  #water {height: 2vh;}
-
-
-
-                                              }
-                
-
-
-/*LARGE  SCREEN*/
+/*WIDE SCREEN*/
 @media only screen and (min-width: 601px) {
-                     
-                  h1 br {display: block;}
-                  h1 span {font-size: 12vw;}
-}
+   h1 {font-size: 6vw;
+    
+    }
+
+h1 br {
+  display: none;
+ }
 
 
+#product-component-1647289725858 {margin: 5vw}
 
 
-
-
+p {margin: 1vh; text-align: left;}
 
 
 
@@ -268,7 +247,15 @@ button:hover + hr {background-color: blue}
 }
 
 
-
+#water {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(to right, blue, darkblue, powderblue, aliceblue);
+  left: 0;
+  border-top: 1px solid blue;
+}
 
 
 

@@ -21,6 +21,8 @@
      document.getElementById('learnMoreID').style.display = 'none';
     document.getElementById('learnMoreID').style.opacity = '1';
     document.getElementById('startContentID').style.display = 'none';
+        document.getElementById('headingID').style.display = 'none';
+
     }
 
 function openSampleBook() {
@@ -55,19 +57,18 @@ function openLearnMore() {
 
 <h3>A young boy creates an elaborate game to avoid going to bed</h3>
 
-<button id="buyBook" class="button" onclick="openBuyBook()">Buy the book</button>
-<button id="readIt" class="button" onclick="openSampleBook()">Read it online</button>
-<button id="learnMore" class="button" onclick="openLearnMore()">Learn more</button>
+<button id="buyBook" class="cloudButton" style="" onclick="openBuyBook()">Buy the book</button>
+<button id="readIt" class="cloudButton" onclick="openSampleBook()">Read it online</button>
+<button id="learnMore" class="cloudButton" onclick="openLearnMore()">Learn more</button>
 
 <hr class="thistest" title="butter">
-<h1>The Floor is <br><span>Full of Sharks</span></h1>
-
+<h1 id="headingID">The Floor is Full of <br><span>Sharks</span></h1>
 
 </div>
 
 
 
-<div class="midContent"> <!--VERTICAL MIDDLE-->
+<div class="midContent" > <!--VERTICAL MIDDLE-->
 
   <!--BLANK START-->
   <div hidden id="startContentID" class="startContent"></div>
@@ -85,13 +86,16 @@ function openLearnMore() {
   <!--BUY BOOK-->
   <div hidden id="buyContentID" class="buyContent">
 
-          <div class="threeWay" style=""></div>
+          <div class="threeWay" style="background-image: url(images/parachute.png); background-size: 60% auto; background-repeat: no-repeat; background-position: top;
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);"></div>
           
           <div class="threeWay centerWay" style="">
                 <div id='product-component-1647289725858' style=";margin-left: 30%; margin-right: 30%; margin-top: 0px;"></div>
           </div>
           
-          <div class="threeWay" style=""></div>
+          <div class="threeWay" style="background-image: url(images/vines.png); background-size: cover; background-repeat: no-repeat;"></div>
 
 
   <!--READ BOOK-->
@@ -371,7 +375,7 @@ function openLearnMore() {
 <!-- FOOTER -->
 <div id="water"></div>
 <div class="water"></div>
-<img src="images/fin.png" id="sharkFin2" class="" style="">
+<img src="images/fin2.png" id="sharkFin2" class="" style="">
 <img src="images/fin.png" id="sharkFin1" class="" style="">
 
 
