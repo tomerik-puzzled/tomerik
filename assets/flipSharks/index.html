@@ -40,10 +40,14 @@ function openSampleBook() {
 function openLearnMore() {
     document.getElementById('learnMoreID').style.display = 'block';
     document.getElementById('learnMoreID').style.opacity = '1';
+    document.getElementById('parachute').style.display = 'none';
+    document.getElementById('palmtree').style.display = 'none';
+    
     document.getElementById('buyContentID').style.display = 'none';
-    document.getElementById('buyContentID').style.opacity = '0';
+     /*
     document.getElementById('startContentID').style.display = 'none';
     document.getElementById('displaySampleBookID').style.display = 'none';
+    */
     
     }
 
@@ -51,8 +55,8 @@ function openLearnMore() {
 </script>
 
 <!-- partial:index.partial.html -->
-<img class="palm" src="images/palmtreeNarrow.png">
-<img class="parachute" src="images/parachute.png">
+<img id="palmtree" src="images/palmtreeNarrow.png">
+<img id="parachute" class="parachute" src="images/parachute.png">
 
 
 <div class="header">
@@ -85,7 +89,7 @@ function openLearnMore() {
   <!--LEARN MORE-->
   <div hidden id="learnMoreID"    class="" style="display: none">
           <div class="threeWay leftColumn" style=""></div>
-          <div class="threeWay centerWay" style=" overflow-y: scroll"><h2>ABOUT THE BOOK</h2><p style="text-align:left; align-self: left;">The Floor is Full of Sharks is a fun bedtime story about a young boy who creates an elaborate game to avoid his own bedtime. <br><br>It comes in a glossy soft cover with 40 pages full of colorful art. It's suitable for kids 2-5 years old. <br><br>Created and printed in Toronto.</p><h2>ABOUT THE AUTHOR</h2><p>The author and creator is Tom Erik Rossavik. He lives in Toronto, Canada, and far too often has to play elaborate games in order to get his own son to sleep.</p></div>
+          <div class="threeWay centerWay" style=" overflow-y: scroll;"><h2>ABOUT THE BOOK</h2><p style="text-align:left; align-self: left;">The Floor is Full of Sharks is a fun bedtime story about a young boy who creates an elaborate game to avoid his own bedtime. <br><br>It comes in a glossy soft cover with 40 pages full of colorful art. It's suitable for kids 2-5 years old. <br><br>Created and printed in Toronto.</p><h2>ABOUT THE AUTHOR</h2><p>The author and creator is Tom Erik Rossavik. He lives in Toronto, Canada, and far too often has to play elaborate games in order to get his own son to sleep.</p></div>
           <div class="threeWay rightColumn" style=""></div>
   </div>
 
@@ -97,10 +101,15 @@ function openLearnMore() {
           <div class="threeWay" style=""></div>
           
           <div class="threeWay centerWay" style="">
-                <div id='product-component-1647289725858' style=";margin-left: 30%; margin-right: 30%; margin-top: 0px;"></div>
+                <img src="images/1.png" id="bookImage1" class="nextToButton" >
+                <img src="images/3.png" id="bookImage2" class="nextToButton" onclick="loadScript()">
+                <img src="images/2.png" id="bookImage3" class="nextToButton">
+                <div id='product-component-1649299388877' style=";margin-left: 30%; margin-right: 30%; margin-top: 0px;"></div>
+
+
           </div>
           
-          <div class="threeWay rightColumn" style="background-image: url(images/vines.png); background-size: cover; background-repeat: no-repeat;"></div>
+          <div class="threeWay rightColumn" style="background-image: url(); background-size: cover; background-repeat: no-repeat;"></div>
 
 
   <!--READ BOOK-->
@@ -387,8 +396,8 @@ function openLearnMore() {
 
 
 <script type="text/javascript">
-  /*<![CDATA[*/
-  (function () {
+/*<![CDATA[*/
+(function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   if (window.ShopifyBuy) {
     if (window.ShopifyBuy.UI) {
@@ -414,25 +423,36 @@ function openLearnMore() {
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '7600075145470',
-        node: document.getElementById('product-component-1647289725858'),
+        node: document.getElementById('product-component-1649299388877'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
-        
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
         }
       },
       "button": {
+        "font-family": "Gill Sans, sans-serif",
         ":hover": {
           "background-color": "#1d2d9c"
         },
         "background-color": "#2032ad",
         ":focus": {
           "background-color": "#1d2d9c"
-        }
+        },
+        "border-radius": "7px",
+        "padding-left": "17px",
+        "padding-right": "17px"
       }
+    },
+    "contents": {
+      "img": false,
+      "title": false,
+      "price": false
     },
     "text": {
       "button": "Add to cart"
@@ -442,7 +462,7 @@ function openLearnMore() {
     "styles": {
       "products": {
         "@media (min-width: 601px)": {
-          
+          "margin-left": "-20px"
         }
       }
     }
@@ -457,17 +477,23 @@ function openLearnMore() {
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
-          
-           }
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
       },
       "button": {
+        "font-family": "Gill Sans, sans-serif",
         ":hover": {
           "background-color": "#1d2d9c"
         },
         "background-color": "#2032ad",
         ":focus": {
           "background-color": "#1d2d9c"
-        }
+        },
+        "border-radius": "7px",
+        "padding-left": "17px",
+        "padding-right": "17px"
       }
     },
     "text": {
@@ -478,13 +504,15 @@ function openLearnMore() {
   "cart": {
     "styles": {
       "button": {
+        "font-family": "Gill Sans, sans-serif",
         ":hover": {
           "background-color": "#1d2d9c"
         },
         "background-color": "#2032ad",
         ":focus": {
           "background-color": "#1d2d9c"
-        }
+        },
+        "border-radius": "7px"
       }
     },
     "text": {
@@ -495,6 +523,7 @@ function openLearnMore() {
   "toggle": {
     "styles": {
       "toggle": {
+        "font-family": "Gill Sans, sans-serif",
         "background-color": "#2032ad",
         ":hover": {
           "background-color": "#1d2d9c"

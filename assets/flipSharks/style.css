@@ -134,9 +134,9 @@ background-size: 500% 100%;
 #readIt{left: 35vw;}
 #learnMore{left: 66vw;}
 
-.header { min-height: 20vh; border:solid red 0px; width: 100vw; position: absolute;}
+.header { min-height: 20vh; border:solid red 0px; width: 100vw; position: relative;}
 
-.midContent {border: 2px solid pink; height: 60vh; width: 100vw;  position: absolute; }
+.midContent {border: 0px solid pink; height: 60vh; width: 100vw;  position: absolute; }
 
 .buyContent {
   cursor: crosshair;
@@ -161,9 +161,65 @@ background-size: 500% 100%;
              background-color: none;
             width: 30vw;   
             min-height: 50vh; 
-            position: relative;}
+            position: relative;
 
-.centerWay {width: 40vw;}
+ 
+          }
+         /* width */
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1); 
+height: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.centerWay {width: 40vw; display: inline;}
+
+.nextToButton {max-width: 15vw; height: auto; margin-left: -5vw;}
+
+#bookImage1{
+-webkit-transform:rotate(-10deg); /* Chrome, Safari, Opera */
+-moz-transform: rotate(-10deg);
+-ms-transform: rotate(-10deg);
+-o-transform: rotate(-10deg);
+transform: rotate(-10deg);   /* Standard syntax */
+}
+
+#bookImage2{
+-webkit-transform:rotate(2deg); /* Chrome, Safari, Opera */
+-moz-transform: rotate(2deg);
+-ms-transform: rotate(2deg);
+-o-transform: rotate(2deg);
+transform: rotate(2deg);   /* Standard syntax */
+max-width: 24vw;
+margin-left: -7vw;
+
+}
+
+#bookImage3{
+-webkit-transform:rotate(14deg); /* Chrome, Safari, Opera */
+-moz-transform: rotate(14deg);
+-ms-transform: rotate(14deg);
+-o-transform: rotate(14deg);
+transform: rotate(14deg);   /* Standard syntax */
+margin-left: -8vw;
+
+}
 
 /*
 .centerWay {background-color: rgba(0, 255, 0, 1.0);}
@@ -171,7 +227,7 @@ background-size: 500% 100%;
 */
 .rightColumn {
   
-  background-color: rgba(0, 0, 255, 0.9); 
+   
   /*
   background-image: url(images/palmtree.png);
   background-position: center;
@@ -186,7 +242,7 @@ background-size: 500% 100%;
   */
 }
 
-.palm {
+#palmtree {
   min-width: 10vw; 
   height: 120vh;
   width: auto; 
@@ -196,7 +252,7 @@ background-size: 500% 100%;
   z-index: 100;
 }
 
-.parachute {
+#parachute {
   min-width: 10vw; 
   height: 50vh;
   width: auto; 
@@ -247,7 +303,7 @@ p {margin: 1vh; text-align: left;}
 
 /*MOBILE*/
 @media only screen and (max-width: 600px)     {
-                  h1 { font-size: 10vw;
+                  h1 { font-size: 8vw;
                       padding-top: 4vw; }
                   h1 br {display: block;}
                   h1 span {font-size: 12vw;}
@@ -255,6 +311,31 @@ p {margin: 1vh; text-align: left;}
                   .threeWay {width: 10vw;}
                   .centerWay {width: 80vw;}
                   #water {height: 2vh;}
+
+                  #palmtree {
+                           
+                          height: 80vh;
+                          width: auto; 
+                          right: -45vw;
+                          bottom: -20vh;
+                          z-index: 100;
+                        }
+
+                  #parachute 
+                        {
+                          height: 30vh;
+                          width: auto; 
+                          position: fixed;
+                          left: 0vw;
+                          top: 20vh;
+                          z-index: 100;
+                          -o-transform: scaleX(-1);
+                          -webkit-transform: scaleX(-1);
+                          transform: scaleX(-1);
+                          }
+
+
+
 
 
 
