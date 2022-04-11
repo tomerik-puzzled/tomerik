@@ -18,12 +18,18 @@
   function openBuyBook() {
     document.getElementById('buyContentID').style.display = 'block';
     document.getElementById('buyContentID').style.opacity = '1';
-     document.getElementById('learnMoreID').style.display = 'none';
+    document.getElementById('learnMoreID').style.display = 'none';
     document.getElementById('learnMoreID').style.opacity = '1';
     document.getElementById('startContentID').style.display = 'none';
-        document.getElementById('headingID').style.width = '';
-
+    document.getElementById('headingID').style.width = '';
     }
+
+    function openBuyBookSmall() {
+    document.getElementsByClassName("artySides")[0].style.display = "none";
+    document.getElementsByClassName("artySides")[1].style.display = "none";
+    
+    }
+
 
 function openSampleBook() {
     document.getElementById('displaySampleBookID').style.display = 'block';
@@ -39,10 +45,7 @@ function openSampleBook() {
 
 function openLearnMore() {
     document.getElementById('learnMoreID').style.display = 'block';
-    document.getElementById('learnMoreID').style.opacity = '1';
-    document.getElementById('parachute').style.display = 'none';
-    document.getElementById('palmtree').style.display = 'none';
-    
+    document.getElementById('learnMoreID').style.opacity = '1';    
     document.getElementById('buyContentID').style.display = 'none';
      /*
     document.getElementById('startContentID').style.display = 'none';
@@ -55,8 +58,8 @@ function openLearnMore() {
 </script>
 
 <!-- partial:index.partial.html -->
-<img id="palmtree" src="images/palmtreeNarrow.png">
-<img id="parachute" class="parachute" src="images/parachute.png">
+<img id="parachute" class="artySides" src="images/parachute.png">
+<img id="palmtree" class="artySides" src="images/palmtreeThinnest.png">
 
 
 <div class="header">
@@ -64,9 +67,13 @@ function openLearnMore() {
 
 <h3>A young boy creates an elaborate game to avoid going to bed</h3>
 
-<button id="buyBook" class="button" style="" onclick="openBuyBook()">Buy the book</button>
+<button id="buyBook" class="button" style="" onclick="openBuyBook();">Buy the book</button>
 <button id="readIt" class="button" onclick="openSampleBook()">Read it online</button>
 <button id="learnMore" class="button" onclick="openLearnMore()">Learn more</button>
+
+<button id="buyBookSmall" class="buttonSmall" style="" onclick="openBuyBook(); openBuyBookSmall();">Buy the book</button>
+<button id="readItSmall" class="buttonSmall" onclick="openSampleBook()">Read it online</button>
+<button id="learnMoreSmall" class="buttonSmall" onclick="openLearnMore()">Learn more</button>
 
 <hr class="thistest" title="butter">
 <h1 id="headingID">The Floor is Full of <br><span>Sharks</span></h1>
@@ -79,10 +86,13 @@ function openLearnMore() {
 <div class="midContent" > <!--VERTICAL MIDDLE-->
 
   <!--BLANK START-->
-  <div hidden id="startContentID" class="startContent">
+  <div id="startContentID" class="startContent">
           <div class="threeWay leftColumn" style=""></div>
-          <div class="threeWay centerWay" style=" overflow-y: scroll"><h2>ABOUT THE BOOK</h2></div>
-          <div class="threeWay rightColumn" style=""></div>
+          <div class="threeWay centerWay" style=""></div>
+          <div class="threeWay rightColumn" style="">
+            
+
+          </div>
   </div>
 
 
@@ -101,9 +111,12 @@ function openLearnMore() {
           <div class="threeWay" style=""></div>
           
           <div class="threeWay centerWay" style="">
+                <img src="images/6.png" id="bookImage0" class="nextToButton" >
+               <!--
                 <img src="images/1.png" id="bookImage1" class="nextToButton" >
-                <img src="images/3.png" id="bookImage2" class="nextToButton" onclick="loadScript()">
+                <img src="images/5.png" id="bookImage2" class="nextToButton" onclick="loadScript()">
                 <img src="images/2.png" id="bookImage3" class="nextToButton">
+               -->
                 <div id='product-component-1649299388877' style=";margin-left: 30%; margin-right: 30%; margin-top: 0px;"></div>
 
 

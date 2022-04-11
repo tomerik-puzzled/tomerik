@@ -53,35 +53,9 @@ h1 { position: relative;
  hr {display: none; background-color: transparent; width: 92vw; height: 1vw; border: darkblue solid 0.2vw;  position: absolute; top: calc(1.7vw + 6vw); left: 4vw;}
  h3 {display: none; font-size: 1.2vw; text-align: center; position: relative; color: darkblue; font-family: 'Helvetica', cursive; text-transform: none;}
 
-.cloudButton { 
-        background-image: url(images/clipArtCloudSmall.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: transparent;
-        font-family: 'Open Sans', sans-serif;
-        display: inline-block;
-        margin: 0 auto;
-        font-weight: 1.8vw;
-        text-align: center;
-        font-size: 2vw;
-        z-index: 100;
-        position: absolute;
-        transition: 0.2s;
-        cursor: pointer;
-        min-width: 20vw;
-        height: 10vw;
-        border: none;
-        margin-top: -16px;
-      }
-
-.cloudButton:hover {transform: scale(1.1);}
-
-
-.button { 
-        background: transparent; color: darkblue; 
+.buttonSmall { 
+        background: rgba(0, 255, 0, 0.1); color: darkblue; 
         border: transparent;
-
         border-bottom: 0.2vw solid darkblue;
         border-left: 0.2vw solid darkblue;
         border-right: 0.2vw solid transparent;
@@ -95,7 +69,33 @@ h1 { position: relative;
         z-index: 100;
         position: absolute;
         transition: 0.2s;
+        cursor: pointer;
+        min-width: 20vw;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 30%;
+        border-top-right-radius: 0px;
+        margin-top: 0px;
+        display: none;
+      }
+
+
+.button { 
+        background: transparent; color: darkblue; 
+        border: transparent;
+        border-bottom: 0.2vw solid darkblue;
+        border-left: 0.2vw solid darkblue;
+        border-right: 0.2vw solid transparent;
+        border-top: 0.2vw solid transparent;
+        font-family: 'Open Sans', sans-serif;
+        display: inline-block;
+        margin: 0 auto;
+        font-weight: 1.8vw;
+        text-align: center;
+        font-size: 2vw;
         z-index: 100;
+        position: absolute;
+        transition: 0.2s;
         cursor: pointer;
         min-width: 20vw;
         border-bottom-left-radius: 0px;
@@ -134,7 +134,13 @@ background-size: 500% 100%;
 #readIt{left: 35vw;}
 #learnMore{left: 66vw;}
 
-.header { min-height: 20vh; border:solid red 0px; width: 100vw; position: relative;}
+
+#buyBookSmall{left: 5vw;}
+#readItSmall{left: 35vw;}
+#learnMoreSmall{left: 66vw;}
+
+
+.header { min-height: 20vh; border:solid red 0px; width: 100vw; position: relative; padding-bottom: 0px; margin-bottom: 0px}
 
 .midContent {border: 0px solid pink; height: 60vh; width: 100vw;  position: absolute; }
 
@@ -159,9 +165,9 @@ background-size: 500% 100%;
 .threeWay { float:left; 
             margin: 0;
              background-color: none;
-            width: 30vw;   
+            width: 26vw;   
             min-height: 50vh; 
-            position: relative;
+            
 
  
           }
@@ -188,40 +194,51 @@ height: 10px;
 }
 
 
-.centerWay {width: 40vw; display: inline;}
+.centerWay {width: 45vw; display: inline; border: 0px black solid; padding: 0px}
 
-.nextToButton {max-width: 15vw; height: auto; margin-left: -5vw;}
+.nextToButton {max-width: 100%; height: auto; margin-left: 0vw; margin-top: 0px; margin-bottom: 0px;}
 
+#bookImage0{
+margin-top: 0px;
+}
+
+/*
 #bookImage1{
--webkit-transform:rotate(-10deg); /* Chrome, Safari, Opera */
+-webkit-transform:rotate(-10deg); 
 -moz-transform: rotate(-10deg);
 -ms-transform: rotate(-10deg);
 -o-transform: rotate(-10deg);
-transform: rotate(-10deg);   /* Standard syntax */
+transform: rotate(-10deg);   
+margin-top: 0px;
 }
 
 #bookImage2{
--webkit-transform:rotate(2deg); /* Chrome, Safari, Opera */
+-webkit-transform:rotate(2deg); 
 -moz-transform: rotate(2deg);
 -ms-transform: rotate(2deg);
 -o-transform: rotate(2deg);
-transform: rotate(2deg);   /* Standard syntax */
-max-width: 24vw;
+transform: rotate(2deg);   
+max-width: 27vw;
 margin-left: -7vw;
+margin-top: 0px;
+padding-top: 0px;
+border: solid yellow 3px;
+z-index: 101;
 
 }
 
 #bookImage3{
--webkit-transform:rotate(14deg); /* Chrome, Safari, Opera */
+-webkit-transform:rotate(14deg); 
 -moz-transform: rotate(14deg);
 -ms-transform: rotate(14deg);
 -o-transform: rotate(14deg);
-transform: rotate(14deg);   /* Standard syntax */
+transform: rotate(14deg);   
 margin-left: -8vw;
+max-width: 17vw;
 
 }
 
-/*
+
 .centerWay {background-color: rgba(0, 255, 0, 1.0);}
 .leftColumn {background-color: rgba(250, 0, 0, 0.9);}
 */
@@ -247,9 +264,10 @@ margin-left: -8vw;
   height: 120vh;
   width: auto; 
   position: fixed;
-  right: -10vw;
+  right: 0vw;
   bottom: -20vh;
   z-index: 100;
+  border: solid 0px yellow;
 }
 
 #parachute {
@@ -257,7 +275,7 @@ margin-left: -8vw;
   height: 50vh;
   width: auto; 
   position: fixed;
-  left: 0vw;
+  left: -4vw;
  top: 20vh;
   z-index: 100;
 
@@ -276,7 +294,7 @@ p {margin: 1vh; text-align: left;}
 
 
 .startContent {
-  background-image: url('images/bookTemp.png');
+  background-image: url('');
   background-position: center;
   background-size: auto;
   background-size: contain;
@@ -285,7 +303,7 @@ p {margin: 1vh; text-align: left;}
       position: relative; 
   border: solid black 0px;
   width: 100vw;
-  height: 60vh;
+  
       }
 
 
@@ -302,7 +320,7 @@ p {margin: 1vh; text-align: left;}
 
 
 /*MOBILE*/
-@media only screen and (max-width: 600px)     {
+@media only screen and (max-width: 770px)     {
                   h1 { font-size: 8vw;
                       padding-top: 4vw; }
                   h1 br {display: block;}
@@ -311,13 +329,15 @@ p {margin: 1vh; text-align: left;}
                   .threeWay {width: 10vw;}
                   .centerWay {width: 80vw;}
                   #water {height: 2vh;}
+                  .button {display: none}
+                  .buttonSmall {display: block;}
 
                   #palmtree {
                            
                           height: 80vh;
                           width: auto; 
-                          right: -45vw;
-                          bottom: -20vh;
+                          right: -1vw;
+                          bottom: 0vh;
                           z-index: 100;
                         }
 
@@ -335,7 +355,7 @@ p {margin: 1vh; text-align: left;}
                           }
 
 
-
+                  .smallPhoneOnly {display: block;}
 
 
 
