@@ -6,7 +6,7 @@
   <title>The Floor is Full of Sharks</title>
   <link rel="stylesheet" href="./style.css">
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -17,28 +17,18 @@
 <script>
   function openBuyBook() {
     document.getElementById('buyContentID').style.display = 'block';
-    document.getElementById('buyContentID').style.opacity = '1';
     document.getElementById('learnMoreID').style.display = 'none';
     document.getElementById('learnMoreID').style.opacity = '1';
-    document.getElementById('startContentID').style.display = 'none';
     document.getElementById('headingID').style.width = '';
-    }
-
-    function openBuyBookSmall() {
-    document.getElementsByClassName("artySides")[0].style.display = "none";
-    document.getElementsByClassName("artySides")[1].style.display = "none";
-    
     }
 
 
 function openSampleBook() {
-    document.getElementById('displaySampleBookID').style.display = 'block';
-    document.getElementById('displaySampleBookID').style.opacity = '0';
+      document.getElementById('displaySampleBookID').style.display = 'block';
 
+    document.getElementById('learnMoreID').style.display = 'none';   
     document.getElementById('buyContentID').style.display = 'none';
-    document.getElementById('startContentID').style.display = 'none';
-    document.getElementById('learnMoreID').style.display = 'none';
-    document.getElementById('learnMoreID').style.opacity = '0';
+   
     
     }
 
@@ -47,10 +37,12 @@ function openLearnMore() {
     document.getElementById('learnMoreID').style.display = 'block';
     document.getElementById('learnMoreID').style.opacity = '1';    
     document.getElementById('buyContentID').style.display = 'none';
-     /*
-    document.getElementById('startContentID').style.display = 'none';
-    document.getElementById('displaySampleBookID').style.display = 'none';
-    */
+    
+    }
+
+  function openLearnMoreSmall() {
+    document.getElementsByClassName("artySides")[0].style.display = "none";
+    document.getElementsByClassName("artySides")[1].style.display = "none";
     
     }
 
@@ -70,12 +62,39 @@ function openLearnMore() {
 <button id="buyBook" class="button" style="" onclick="openBuyBook();">Buy the book</button>
 <button id="readIt" class="button" onclick="openSampleBook()">Read it online</button>
 <button id="learnMore" class="button" onclick="openLearnMore()">Learn more</button>
-
+<!--
 <button id="buyBookSmall" class="buttonSmall" style="" onclick="openBuyBook(); openBuyBookSmall();">Buy the book</button>
 <button id="readItSmall" class="buttonSmall" onclick="openSampleBook()">Read it online</button>
 <button id="learnMoreSmall" class="buttonSmall" onclick="openLearnMore()">Learn more</button>
+-->
 
-<hr class="thistest" title="butter">
+<div class="topnav">
+      <a href="#home" class="active"><h1 id="headingMobile">The Floor is Full of <br><span>Sharks</span></h1></a>
+      <div id="myLinks">
+        
+        
+       <button id="buyBookMobile" class="mobButton" onclick="openBuyBook(); toggleMobileMenu();">Buy Book</button>
+       <button id="readItMobile" class="mobButton" onclick="openSampleBook(); toggleMobileMenu()">Read it Online</button>
+       <button id="learnMoreMobile" class="mobButton" onclick="openLearnMore(); toggleMobileMenu()">Learn More</button>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+</div>
+
+<script>
+function toggleMobileMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+
+<!--<hr class="thistest" title="butter">-->
 <h1 id="headingID">The Floor is Full of <br><span>Sharks</span></h1>
 
 </div>
@@ -85,8 +104,8 @@ function openLearnMore() {
 -->
 <div class="midContent" > <!--VERTICAL MIDDLE-->
 
-  <!--BLANK START-->
-  <div id="startContentID" class="startContent">
+  <!--BLANK START
+  <div id="startContentID" class="startContent" style="display:none">
           <div class="threeWay leftColumn" style=""></div>
           <div class="threeWay centerWay" style=""></div>
           <div class="threeWay rightColumn" style="">
@@ -94,12 +113,12 @@ function openLearnMore() {
 
           </div>
   </div>
-
+-->
 
   <!--LEARN MORE-->
-  <div hidden id="learnMoreID"    class="" style="display: none">
+ <div hidden id="learnMoreID"    class="" style="display: none">
           <div class="threeWay leftColumn" style=""></div>
-          <div class="threeWay centerWay" style=" overflow-y: scroll;"><h2>ABOUT THE BOOK</h2><p style="text-align:left; align-self: left;">The Floor is Full of Sharks is a fun bedtime story about a young boy who creates an elaborate game to avoid his own bedtime. <br><br>It comes in a glossy soft cover with 40 pages full of colorful art. It's suitable for kids 2-5 years old. <br><br>Created and printed in Toronto.</p><h2>ABOUT THE AUTHOR</h2><p>The author and creator is Tom Erik Rossavik. He lives in Toronto, Canada, and far too often has to play elaborate games in order to get his own son to sleep.</p></div>
+          <div class="threeWay centerWay" style=" overflow-y: scroll;"><h2>ABOUT THE BOOK</h2><p style="text-align:left; align-self: left;">The Floor is Full of Sharks is a fun bedtime story about a young boy who creates an elaborate game to avoid his bedtime. <br><br>It comes in a glossy soft cover with 40 pages full of colorful art. It's suitable for kids 2-5 years old. <br><br>Created and printed in Toronto.</p><h2>ABOUT THE AUTHOR</h2><p>The author and creator is Tom Erik Rossavik. He lives in Toronto, Canada, and far too often has to play elaborate games in order to get his own son to sleep.</p></div>
           <div class="threeWay rightColumn" style=""></div>
   </div>
 
@@ -111,25 +130,36 @@ function openLearnMore() {
           <div class="threeWay" style=""></div>
           
           <div class="threeWay centerWay" style="">
+                
                 <img src="images/6.png" id="bookImage0" class="nextToButton" >
                <!--
                 <img src="images/1.png" id="bookImage1" class="nextToButton" >
                 <img src="images/5.png" id="bookImage2" class="nextToButton" onclick="loadScript()">
                 <img src="images/2.png" id="bookImage3" class="nextToButton">
                -->
-                <div id='product-component-1649299388877' style=";margin-left: 30%; margin-right: 30%; margin-top: 0px;"></div>
 
+                <p>Format: Soft Cover Book | Price: $20 + Shipping</p>
+                <br>
+                <div id='product-component-1649299388877' style=";margin-left: 30%; margin-right: 30%; margin-top: -20px; border:solid 0px black; padding-top: -20px;"></div>
+                 <hr>
+
+                
+                <hr>
+                <br>
+                <br>
 
           </div>
           
           <div class="threeWay rightColumn" style="background-image: url(); background-size: cover; background-repeat: no-repeat;"></div>
-
+  </div>   <!--BUY BOOK ENDS-->
 
   <!--READ BOOK-->
-<!--
-  <div id="displaySampleBookID" style="">
-    
-  <div class="book">
+
+  <div hidden id="displaySampleBookID">
+                    
+  <div id="rotateScreen">  </div>               
+
+  <div id="theActualBook" class="book">
   <div class="Wrapper">
 
     <div class="centerShading"></div>
@@ -390,11 +420,10 @@ function openLearnMore() {
   </div>  <!--INTERACTIVE BOOK ENDS-->
  
 
-  </div>   <!--BUY BOOK ENDS-->
+  
 
 
 </div>   <!-- VERTICAL MID CONTENT ENDS-->
-
 
 
 
