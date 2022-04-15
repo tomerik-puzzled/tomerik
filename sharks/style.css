@@ -426,6 +426,25 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
 @media only screen and (orientation: portrait) {
                   #rotateScreen {display: block}
                   #theActualBook {display: none;}
+                  #palmtree { 
+                          height: 80vh;
+                          width: auto; 
+                          right: -10vw;
+                          bottom: -25vh;
+                          z-index: 2;
+                        }
+                  #parachute 
+                        {
+                          height: 20vh;
+                          width: auto; 
+                          position: fixed;
+                          left: 0vw;
+                          top: 70vh;
+                          z-index: 2;
+                          -o-transform: scaleX(-1);
+                          -webkit-transform: scaleX(-1);
+                          transform: scaleX(-1);  
+                          }
                   
 }    
 
