@@ -29,7 +29,7 @@ body {
   color: darkblue; font-family: 'Helvetica', cursive;
 }
 
-
+#product-component-1649299388877 {z-index: 100;}
 
 
 .topnav {
@@ -315,8 +315,9 @@ max-width: 17vw;
   position: fixed;
   right: 0vw;
   bottom: -20vh;
-  z-index: 2;
+  z-index: 1;
   border: solid 0px yellow;
+
                       
 }
 
