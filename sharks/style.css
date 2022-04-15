@@ -435,11 +435,11 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
                         }
                   #parachute 
                         {
-                          height: 20vh;
+                          height: 25vh;
                           width: auto; 
                           position: fixed;
                           left: 0vw;
-                          top: 70vh;
+                          top: 50vh;
                           z-index: 2;
                           -o-transform: scaleX(-1);
                           -webkit-transform: scaleX(-1);
