@@ -379,79 +379,8 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
 
 }
 
-/*MOBILE*/
-@media only screen and (max-width: 770px)     {
-                  h1 { font-size: 18px;
-                      padding-top: 0vw; margin-top: 0vh;}
-                  h1 br {display: block;}
-                  h1 span {font-size: 50px;}
-                  .button { font-size: 3.7vw;  display: none;}
-                  .threeWay {width: 10vw;}
-                  .centerWay {width: 80vw; margin-top: 5vh;}
-                  #water {height: 2vh;}
-                  .button {display: none}
-                  .buttonSmall {display: block;}
-                  #headingID {display: none}
-                  .topnav {display: block;}
-                  #palmtree { 
-                          height: 80vh;
-                          width: auto; 
-                          right: -10vw;
-                          bottom: -25vh;
-                          z-index: 2;
-                        }
-                  #parachute 
-                        {
-                          height: 20vh;
-                          width: auto; 
-                          position: fixed;
-                          left: 0vw;
-                          top: 70vh;
-                          z-index: 2;
-                          -o-transform: scaleX(-1);
-                          -webkit-transform: scaleX(-1);
-                          transform: scaleX(-1);  
-                          }
-                                              }
-
-@media only screen and (max-width: 770px) and (orientation: landscape) {
-                  #parachute {height: 15vw; min-width: auto;
-                    position: absolute; top: 10vh;}
-                                      #rotateScreen {display: none}
-                                      #theActualBook {display: block;}
-
-              }            
-
-@media only screen and (orientation: portrait) {
-                  #rotateScreen {display: block}
-                  #theActualBook {display: none;}
-                  
-}    
 
 
-/*LARGE  SCREEN*/
-@media only screen and (min-width: 771px) {
-                     
-                  h1 br {display: block;}
-                  h1 span {font-size: 11vw;}
-}
-
-
-
-
-
-
-
-
-
-/*
-
-.button:hover > hr {background-color: red;}
-
-button:hover + hr {background-color: blue}
-
-.daddyO > button {background-color: yellow;}
-*/
 #sharkFin1 {
   width: 10vw; height: auto; 
   position: fixed; 
@@ -484,6 +413,72 @@ button:hover + hr {background-color: blue}
   80%  {left: -8vw; -webkit-transform: scaleX(-1); transform: scaleX(-1);}
   100%  {left: -8vw; -webkit-transform: scaleX(1); transform: scaleX(1);}
 }
+
+
+
+/*MOBILE*/
+@media only screen and (max-width: 770px)     {
+                  h1 { font-size: 18px;
+                      padding-top: 0vw; margin-top: 0vh;}
+                  h1 br {display: block;}
+                  h1 span {font-size: 50px;}
+                  .button { font-size: 3.7vw;  display: none;}
+                  .threeWay {width: 10vw;}
+                  .centerWay {width: 80vw; margin-top: 5vh;}
+                  #water {height: 2vh;}
+                  .button {display: none}
+                  .buttonSmall {display: block;}
+                  #headingID {display: none}
+                  .topnav {display: block;}
+                  #palmtree { 
+                          height: 80vh;
+                          width: auto; 
+                          right: -10vw;
+                          bottom: -25vh;
+                          z-index: 2;
+                        }
+                  #parachute 
+                        {
+                          height: 20vh;
+                          width: auto; 
+                          position: fixed;
+                          left: 0vw;
+                          top: 70vh;
+                          z-index: 2; 
+                          }
+
+                  #sharkFin1 {                     bottom: 1vh; }
+
+                  #sharkFin2 {                    bottom: 2vh; }
+
+
+                                              }
+
+@media only screen and (max-width: 770px) and (orientation: landscape) {
+                  #parachute {height: 15vw; min-width: auto;
+                    position: absolute; top: 10vh;}
+                                      #rotateScreen {display: none}
+                                      #theActualBook {display: block;}
+
+              }            
+
+@media only screen and (orientation: portrait) {
+                  #rotateScreen {display: block}
+                  #theActualBook {display: none;}
+                  
+}    
+
+
+/*LARGE  SCREEN*/
+@media only screen and (min-width: 771px) {
+                     
+                  h1 br {display: block;}
+                  h1 span {font-size: 11vw;}
+}
+
+
+
+
 
 
 
