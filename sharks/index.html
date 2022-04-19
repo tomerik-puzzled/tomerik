@@ -49,7 +49,17 @@ function openLearnMore() {
 
 </script>
 
+
+
+
+
+
+
+
+
 <!-- partial:index.partial.html -->
+
+
 <img id="parachute" class="artySides" src="images/parachute.png">
 <img id="palmtree" class="artySides" src="images/palmtreeThinnest.png">
 
@@ -62,11 +72,7 @@ function openLearnMore() {
 <button id="buyBook" class="button" style="" onclick="openBuyBook();">Buy the book</button>
 <button id="readIt" class="button" onclick="openSampleBook()">Read it online</button>
 <button id="learnMore" class="button" onclick="openLearnMore()">Learn more</button>
-<!--
-<button id="buyBookSmall" class="buttonSmall" style="" onclick="openBuyBook(); openBuyBookSmall();">Buy the book</button>
-<button id="readItSmall" class="buttonSmall" onclick="openSampleBook()">Read it online</button>
-<button id="learnMoreSmall" class="buttonSmall" onclick="openLearnMore()">Learn more</button>
--->
+
 
 <div class="topnav">
       <a href="#home" class="active"><h1 id="headingMobile">The Floor is Full of <br><span>Sharks</span></h1></a>
@@ -94,14 +100,10 @@ function toggleMobileMenu() {
 </script>
 
 
-<!--<hr class="thistest" title="butter">-->
 <h1 id="headingID">The Floor is Full of <br><span>Sharks</span></h1>
 
 </div>
-<!--
-<div class="right"></div>
 
--->
 <div class="midContent" > <!--VERTICAL MIDDLE-->
 
   <!--BLANK START
@@ -153,10 +155,54 @@ function toggleMobileMenu() {
           <div class="threeWay rightColumn" style="background-image: url(); background-size: cover; background-repeat: no-repeat;"></div>
   </div>   <!--BUY BOOK ENDS-->
 
-  <!--READ BOOK-->
+
+
+
+
+
 
   <div hidden id="displaySampleBookID">
-                    
+
+<button class="closeActiveDiv" style="float:right; margin: 1vw; z-index: 3; position: absolute;" onclick="closeActiveDiv()">X</button>
+
+<div id="rotateScreen">  </div>   
+
+<script>function closeActiveDiv() {      document.getElementById('displaySampleBookID').style.display = 'none';
+}</script>
+
+    <div class="w3-content w3-display-container">
+  <img class="mySlides" src="spreadz/img.jpg" style="width:100%">
+  <img class="mySlides" src="spreadz/img2.jpg" style="width:100%">
+  <img class="mySlides" src="spreadz/img3.jpg" style="width:100%">
+  <img class="mySlides" src="spreadz/img4.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+          
+  <!--READ BOOK
+
+
   <div id="rotateScreen">  </div>               
 
   <div id="theActualBook" class="book">
@@ -416,8 +462,8 @@ function toggleMobileMenu() {
     </div>
     </div>
 
-
-  </div>  <!--INTERACTIVE BOOK ENDS-->
+<!--INTERACTIVE BOOK ENDS-->
+  </div>  
  
 
   

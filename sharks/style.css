@@ -32,6 +32,9 @@ body {
 #product-component-1649299388877 {z-index: 100;}
 
 
+.mySlides {display:block;}
+
+
 .topnav {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.03);
