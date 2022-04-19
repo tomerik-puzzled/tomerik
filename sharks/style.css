@@ -32,7 +32,7 @@ body {
 #product-component-1649299388877 {z-index: 100;}
 
 
-.mySlides {display:block;}
+.mySlides {display:none;}
 
 
 .topnav {
@@ -210,7 +210,7 @@ background-size: 500% 100%;
 
 }
 
-#displaySampleBookID {display:none; position: fixed; width: 100vw; height: 100vh; background-color: grey; top: 0px; left: 0px; z-index: 100}
+#displaySampleBookID {display:none; position: fixed; width: 100vw; height: 100vh; background-color: white; top: 0px; left: 0px; z-index: 100}
 
 
 .threeWay { float:left; 
@@ -382,6 +382,41 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
   display: none;
 
 }
+
+
+.closeActiveDiv {
+     left: 1vw;
+     margin-top: 1vw; 
+     z-index: 3; 
+     position: absolute; 
+     width: 3vw; 
+     height: 3vw; 
+     border: transparent; 
+     background-color: rgba(0, 0, 255, 0.3); 
+     color: red; 
+     font-size: 2vw; 
+     border-radius: 50%;
+     transition: 0.3s;}
+
+.closeActiveDiv:hover {background-color: blue; color: white; transform: 0.95;}
+
+.w3-button {
+     z-index: 3;
+     width: 2vw; 
+     height: 2vw; 
+     position: relative;
+
+     border: transparent; 
+     background-color: rgba(0, 0, 255, 0.3); 
+     color: red; 
+     font-size: 2vw; 
+      padding-bottom: 2px;
+     transition: 0.3s;}
+
+.w3-button:hover {background-color: blue; color: white; transform: 0.95;
+     }
+
+
 
 /*MOBILE*/
 @media only screen and (max-width: 770px)     {
