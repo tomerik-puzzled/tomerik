@@ -32,7 +32,8 @@ body {
 #product-component-1649299388877 {z-index: 100;}
 
 
-.mySlides {display:none;}
+.mySlides {display:none; text-align: center;   margin-top: 7%; margin-bottom: 5%;
+justify-content: center; justify-items: center; vertical-align: center; border: solid 1px lightgrey;}
 
 
 .topnav {
@@ -210,7 +211,19 @@ background-size: 500% 100%;
 
 }
 
-#displaySampleBookID {display:none; position: fixed; width: 100vw; height: 100vh; background-color: white; top: 0px; left: 0px; z-index: 100}
+#displaySampleBookID {
+        display:none; 
+        position: fixed; 
+        width: 100vw; 
+        height: 100vh; 
+        background-color: white; 
+        top: 0px; 
+        left: 0px; 
+        z-index: 100; 
+        text-align: center;
+        justify-content: center; 
+        justify-items: center; 
+        vertical-align: center;}
 
 
 .threeWay { float:left; 
@@ -254,62 +267,6 @@ margin-top: 0px;
 border: solid 0px green;
 }
 
-/*
-#bookImage1{
--webkit-transform:rotate(-10deg); 
--moz-transform: rotate(-10deg);
--ms-transform: rotate(-10deg);
--o-transform: rotate(-10deg);
-transform: rotate(-10deg);   
-margin-top: 0px;
-}
-
-#bookImage2{
--webkit-transform:rotate(2deg); 
--moz-transform: rotate(2deg);
--ms-transform: rotate(2deg);
--o-transform: rotate(2deg);
-transform: rotate(2deg);   
-max-width: 27vw;
-margin-left: -7vw;
-margin-top: 0px;
-padding-top: 0px;
-border: solid yellow 3px;
-z-index: 101;
-
-}
-
-#bookImage3{
--webkit-transform:rotate(14deg); 
--moz-transform: rotate(14deg);
--ms-transform: rotate(14deg);
--o-transform: rotate(14deg);
-transform: rotate(14deg);   
-margin-left: -8vw;
-max-width: 17vw;
-
-}
-
-
-.centerWay {background-color: rgba(0, 255, 0, 1.0);}
-.leftColumn {background-color: rgba(250, 0, 0, 0.9);}
-*/
-.rightColumn {
-  
-   
-  /*
-  background-image: url(images/palmtree.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: transparent;
-  position: fixed;
-  height: 100vh;
-  bottom: -100px;
-  right: 0px;
-  z-index: 100;
-  */
-}
 
 #palmtree {
   min-width: 10vw; 
@@ -389,8 +346,8 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
      margin-top: 1vw; 
      z-index: 3; 
      position: absolute; 
-     width: 3vw; 
-     height: 3vw; 
+     width: 6vw; 
+     height: 6vw; 
      border: transparent; 
      background-color: rgba(0, 0, 255, 0.3); 
      color: red; 
@@ -402,20 +359,24 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
 
 .w3-button {
      z-index: 3;
-     width: 2vw; 
-     height: 2vw; 
-     position: relative;
-
+     width: 4vw; 
+     height: 4vw; 
+     position: absolute;
+    bottom: 15vh;
      border: transparent; 
+     border-radius: 100%;
      background-color: rgba(0, 0, 255, 0.3); 
      color: red; 
-     font-size: 2vw; 
-      padding-bottom: 2px;
+     font-size: 3vw; 
+     text-align: center;
+      padding: 0;
      transition: 0.3s;}
 
-.w3-button:hover {background-color: blue; color: white; transform: 0.95;
+.w3-button:hover {background-color: blue; color: white; transform: 0.95; 
      }
 
+.buttonLeft {left: 40%;}
+.buttonRight {right: 40%;}
 
 
 /*MOBILE*/
@@ -451,6 +412,7 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
                           -webkit-transform: scaleX(-1);
                           transform: scaleX(-1);  
                           }
+                  
                                               }
 
 @media only screen and (max-width: 770px) and (orientation: landscape) {
@@ -483,7 +445,14 @@ p {margin: 1vh; text-align: center; font-family: 'Caroni'; font-family: 'Open Sa
                           -webkit-transform: scaleX(-1);
                           transform: scaleX(-1);  
                           }
-                  
+                  .closeActiveDiv {
+                          width: 8vh; 
+                         height: 8vh; 
+                         border: transparent; 
+                         background-color: rgba(0, 0, 255, 0.3); 
+                         color: red; 
+                         font-size: 2vh; 
+                  }
 }    
 
 
@@ -536,11 +505,11 @@ button:hover + hr {background-color: blue}
 }
 
 @keyframes swimmingShark2 {
-  0%    {left: -8vw;}
+  0%    {left: -18vw;}
   45%  {left: 113vw;   -webkit-transform: scaleX(1); transform: scaleX(1);}
   55%  {left: 103vw;   -webkit-transform: scaleX(-1); transform: scaleX(-1);}
   80%  {left: -8vw; -webkit-transform: scaleX(-1); transform: scaleX(-1);}
-  100%  {left: -8vw; -webkit-transform: scaleX(1); transform: scaleX(1);}
+  100%  {left: -18vw; -webkit-transform: scaleX(1); transform: scaleX(1);}
 }
 
 
