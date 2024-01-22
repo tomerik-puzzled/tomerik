@@ -82,14 +82,48 @@
   });
 
   let isErasing = false;
+  let eraseTimeout;
+  let phase = 1; // 1 for circular erasing, 2 for full erasing
 
   function startErasing() {
     isErasing = true;
-    sound.play(); // Play the sound when erasing starts
+
+    if (phase === 1) {
+      eraseTimeout = setTimeout(() => {
+        sound.play(); // Play the sound when erasing starts
+        phase = 2; // Move to the next phase after 10 seconds
+        erase();
+      }, 10000); // Set the time for the first phase in milliseconds
+    } else if (phase === 2) {
+      sound.play(); // Play the sound when erasing starts
+      erase();
+    }
   }
 
   function stopErasing() {
     isErasing = false;
+    clearTimeout(eraseTimeout); // Clear the timeout if the user stops erasing before the delay
+  }
+
+  function erase() {
+    if (isErasing) {
+      const x = event.clientX || event.touches[0].clientX;
+      const y = event.clientY || event.touches[0].clientY;
+
+      if (phase === 1) {
+        // Draw a circular path for erasing within a 50px x 50px circle in the middle
+        ctx.beginPath();
+        ctx.arc(x, y, 25, 0, Math.PI * 2);
+        ctx.clip();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.closePath();
+      } else if (phase === 2) {
+        // Erase the entire canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      eraseTimeout = setTimeout(() => erase(), 50); // Set the speed of erasing (50 milliseconds in this case)
+    }
   }
 
   canvas.addEventListener('mousedown', startErasing);
@@ -105,20 +139,11 @@
     stopErasing();
   });
 
-  canvas.addEventListener('mousemove', (e) => {
-    if (isErasing) {
-      const x = e.clientX;
-      const y = e.clientY;
-      ctx.clearRect(x - 10, y - 10, 20, 20);
-    }
-  });
+  canvas.addEventListener('mousemove', erase);
 
   canvas.addEventListener('touchmove', (e) => {
-    if (isErasing) {
-      const x = e.touches[0].clientX;
-      const y = e.touches[0].clientY;
-      ctx.clearRect(x - 10, y - 10, 20, 20);
-    }
+    e.preventDefault();
+    erase(e);
   });
 </script>
 
