@@ -8,30 +8,35 @@
     body {
       margin: 0;
       overflow: hidden;
+      background-color: white; /* Set the background color as needed */
+    }
+
+    #background-image, #canvas {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100vh;
+    }
+
+    #background-image, #canvas {
+      width: 100vw;
+      object-fit: contain;
     }
 
     #background-image {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
       z-index: 1;
     }
 
     #canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
       z-index: 2;
     }
   </style>
 </head>
 <body>
 
-<img id="background-image" src="assets/images/pamelaWithText.jpg" alt="Background Image">
+<audio id="sound" src="yesss.mp3"></audio>
+<img id="background-image" src="pamela2.jpg" alt="Background Image">
 <canvas id="canvas"></canvas>
 
 <script>
@@ -40,17 +45,47 @@
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const backgroundImage = new Image();
-  backgroundImage.src = 'assets/images/pamela.jpeg';
+  const foregroundImage = new Image();
+  foregroundImage.src = 'pamela1.jpg';
+  foregroundImage.onload = drawImage;
 
-  backgroundImage.onload = function () {
-    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-  };
+  const sound = document.getElementById('sound');
+
+  function drawImage() {
+    const backgroundAspect = canvas.width / canvas.height;
+    const foregroundAspect = foregroundImage.width / foregroundImage.height;
+
+    let scaledWidth, scaledHeight, offsetX, offsetY;
+
+    if (backgroundAspect > foregroundAspect) {
+      // Landscape orientation
+      scaledHeight = canvas.height;
+      scaledWidth = scaledHeight * foregroundAspect;
+      offsetX = (canvas.width - scaledWidth) / 2;
+      offsetY = 0;
+    } else {
+      // Portrait orientation
+      scaledWidth = canvas.width;
+      scaledHeight = scaledWidth / foregroundAspect;
+      offsetX = 0;
+      offsetY = (canvas.height - scaledHeight) / 2;
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(foregroundImage, offsetX, offsetY, scaledWidth, scaledHeight);
+  }
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    drawImage();
+  });
 
   let isErasing = false;
 
   function startErasing() {
     isErasing = true;
+    sound.play(); // Play the sound when erasing starts
   }
 
   function stopErasing() {
