@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Reveal</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+<img id="background-image" src="assets/images/pamelaWithText.jpg" alt="Background Image">
+<canvas id="canvas"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const backgroundImage = new Image();
+  backgroundImage.src = 'assets/images/pamela.jpeg';
+
+  backgroundImage.onload = function () {
+    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+  };
+
+  let isErasing = false;
+
+  canvas.addEventListener('mousedown', () => {
+    isErasing = true;
+  });
+
+  canvas.addEventListener('mouseup', () => {
+    isErasing = false;
+  });
+
+  canvas.addEventListener('mousemove', (e) => {
+    if (isErasing) {
+      const x = e.clientX;
+      const y = e.clientY;
+      ctx.clearRect(x - 10, y - 10, 20, 20);
+    }
+  });
+</script>
+
+</body>
+</html>
